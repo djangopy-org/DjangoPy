@@ -96,12 +96,14 @@
 <img class = "img-fluid" alt="" src="/img/reverse-engineering-of-the-django-admin-foreign-keys-addedit-button/cover.jpg" title="" srcset="/assets/resized/480/cover.jpg 480w,/assets/resized/800/cover.jpg 800w,/img/reverse-engineering-of-the-django-admin-foreign-keys-addedit-button/cover.jpg 1240w">
 
     <h1 class="post-title">Reverse Engineering of the Django Admin Foreign Key's Add/Edit Button</h1>
-    <h6 class = "post-spans">Posted: 24 October 2017 | Post By: Jai Singhal | 1k <i class = "fa fa-eye"></i>  | <i class = "fa fa-clock"></i> 7 min read | 15 <i class = "fa fa-comment"></i> </h6>
+    <h6 class = "post-spans">Posted: 07 July 2017 | Post By: Jai Singhal | 1k <i class = "fa fa-eye"></i>  | <i class = "fa fa-clock"></i> 7 min read | 15 <i class = "fa fa-comment"></i> </h6>
     <br />
     <div class = "post-content"> <h2 id="introduction">Introduction</h2>
 <p>In this tutorial, we will learn about how to add Django Admin’s Foreign key’s Add and Edit feature on Django form, so that we can easily add and edit the Foreign Key element in a pop-up window without refreshing the same page. This can be done with the help of AJAX.</p>
 
 <p>Recently I was working on a project and I wanted a functionality such that I can add Foreign Key element just like Django Admin provides. I wanted this feature to be implemented in a form of my app and I found this interesting and surely it will be interesting and helpful to you too.</p>
+
+<p><img class="img-fluid" alt="" src="/img/reverse-engineering-of-the-django-admin-foreign-keys-addedit-button/2.jpg" title="" srcset="/assets/resized/480/2.jpg 480w,/assets/resized/800/2.jpg 800w,/img/reverse-engineering-of-the-django-admin-foreign-keys-addedit-button/2.jpg 998w" /></p>
 
 <h2 id="implementing-server-side">Implementing Server-side</h2>
 <p>Now let’s implement this functionality to your Django app. I will discuss the implementation with the help of an example. Here I take an example of Model Book and Author where Author is a foreign key field in Book Model.</p>
@@ -313,6 +315,8 @@ function closePopup(win, newID, newRepr, id) {
 
 <p>If you have followed the same example, you will get this type of output.</p>
 
+<p><img class="img-fluid" alt="" src="/img/reverse-engineering-of-the-django-admin-foreign-keys-addedit-button/1.jpg" title="" srcset="/assets/resized/480/1.jpg 480w,/assets/resized/800/1.jpg 800w,/img/reverse-engineering-of-the-django-admin-foreign-keys-addedit-button/1.jpg 939w" /></p>
+
 <p>If you have any Question regarding the above tutorial feel free to comment below. And also share the experience with the DjangoPy in the comments below.</p>
  </div>
   </div>
@@ -349,24 +353,6 @@ function closePopup(win, newID, newRepr, id) {
               
       <div class="post col-md-4">
         <div class="post-thumbnail">
-          <a href="/how-to/reverse-engineering-of-the-django-admin-foreign-keys-addedit-button/">
-         <img class = "img-fluid" alt="" src="/img/reverse-engineering-of-the-django-admin-foreign-keys-addedit-button/cover.jpg" title="" srcset="/assets/resized/480/cover.jpg 480w,/assets/resized/800/cover.jpg 800w,/img/reverse-engineering-of-the-django-admin-foreign-keys-addedit-button/cover.jpg 1240w">
-
-        </a>
-      </div>
-        <div class="post-details">
-          <div class="post-meta d-flex justify-content-between">
-            <div class="date">24 October 2017</div>
-            <div class="category"><a href="#">how-to</a></div>
-          </div><a href="/how-to/reverse-engineering-of-the-django-admin-foreign-keys-addedit-button/" class = "catalogue-item" style="text-decoration: none; padding: 2px 0 8px 0;">
-                    <h4>Reverse Engineering of the Django Admin Foreign Key's Add/Edit Button</h4>
-        <div class="catalogue-line" style="padding-bottom:5px;"></div>
-          <p class="text-muted">In this tutorial, we will learn about how to add Django Admin's Foreign key's Add and Edit feature on Django form, so that we can easily add and edit the...</p>
-        </div></a>
-      </div>
-              
-      <div class="post col-md-4">
-        <div class="post-thumbnail">
           <a href="/learn/set-up-authentication-system-in-django-in-just-10-minutes/">
          <img class = "img-fluid" alt="" src="/img/set-up-authentication-system-in-django-in-just-10-minutes/cover.jpg" title="" srcset="/assets/resized/480/cover.jpg 480w,/assets/resized/800/cover.jpg 800w,/img/set-up-authentication-system-in-django-in-just-10-minutes/cover.jpg 1240w">
 
@@ -380,6 +366,24 @@ function closePopup(win, newID, newRepr, id) {
                     <h4>Set-up Authentication System in Django in just 10 minutes</h4>
         <div class="catalogue-line" style="padding-bottom:5px;"></div>
           <p class="text-muted">In this post, we will discuss Authentication System in Django. We will be discussing the most abstract way to how to implement on your Django Project in just simple steps....</p>
+        </div></a>
+      </div>
+              
+      <div class="post col-md-4">
+        <div class="post-thumbnail">
+          <a href="/package-of-week/categories-with-django-mptt/">
+         <img class = "img-fluid" alt="" src="/img/categories-with-django-mptt/cover.jpg" title="" srcset="/assets/resized/480/cover.jpg 480w,/assets/resized/800/cover.jpg 800w,/img/categories-with-django-mptt/cover.jpg 1240w">
+
+        </a>
+      </div>
+        <div class="post-details">
+          <div class="post-meta d-flex justify-content-between">
+            <div class="date">30 July 2017</div>
+            <div class="category"><a href="#">package-of-the-week</a></div>
+          </div><a href="/package-of-week/categories-with-django-mptt/" class = "catalogue-item" style="text-decoration: none; padding: 2px 0 8px 0;">
+                    <h4>Categories with django-mptt</h4>
+        <div class="catalogue-line" style="padding-bottom:5px;"></div>
+          <p class="text-muted">In this post, we'll learn how to implement categories in Django efficiently by storing hierarchical data in place of making many database queries since database queries are costly in terms...</p>
         </div></a>
       </div>
     
