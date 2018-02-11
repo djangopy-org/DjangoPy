@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 12 Feb 2018 00:47:25 +0530</pubDate>
-    <lastBuildDate>Mon, 12 Feb 2018 00:47:25 +0530</lastBuildDate>
+    <pubDate>Mon, 12 Feb 2018 00:56:42 +0530</pubDate>
+    <lastBuildDate>Mon, 12 Feb 2018 00:56:42 +0530</lastBuildDate>
     <generator>Jekyll v3.7.2</generator>
     
       <item>
@@ -368,7 +368,7 @@ body {
 
 &lt;p&gt;If you have followed the exact tutorial, you will have this kind of output for Login Page&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&quot;img-fluid&quot; alt=&quot;&quot; src=&quot;/img/set-up-authentication-system-in-django-in-just-10-minutes/login.jpg&quot; title=&quot;&quot; srcset=&quot;/assets/resized/480/login.jpg 480w,/img/set-up-authentication-system-in-django-in-just-10-minutes/login.jpg 573w&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;img-fluid&quot; alt=&quot;&quot; src=&quot;/img/set-up-authentication-system-in-django-in-just-10-minutes/login.jpg&quot; title=&quot;&quot; srcset=&quot;/assets/resized/480/login.jpg 480w,/img/set-up-authentication-system-in-django-in-just-10-minutes/login.jpg 503w&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;register&quot;&gt;Register&lt;/h2&gt;
 &lt;p&gt;After creating the Login View, let’s create the register view.&lt;/p&gt;
@@ -472,7 +472,7 @@ body {
 &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;&lt;img class=&quot;img-fluid&quot; alt=&quot;&quot; src=&quot;/img/set-up-authentication-system-in-django-in-just-10-minutes/register.jpg&quot; title=&quot;&quot; srcset=&quot;/assets/resized/480/register.jpg 480w,/img/set-up-authentication-system-in-django-in-just-10-minutes/register.jpg 573w&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;img-fluid&quot; alt=&quot;&quot; src=&quot;/img/set-up-authentication-system-in-django-in-just-10-minutes/register.jpg&quot; title=&quot;&quot; srcset=&quot;/assets/resized/480/register.jpg 480w,/img/set-up-authentication-system-in-django-in-just-10-minutes/register.jpg 485w&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;logout&quot;&gt;Logout&lt;/h2&gt;
 &lt;p&gt;Now let’s create our last view i.e., logout view. This is very simple view and very straightforward.&lt;/p&gt;

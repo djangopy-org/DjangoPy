@@ -297,8 +297,8 @@ body {
 
 
 .post-info{color:#aaa;letter-spacing:0.5px;text-align:center}.post-info span{font-style:italic}
-.post-title{color:#353535;font-size:2.5rem;margin:0.75rem 0; font-weight: 580;}
-.post-spans{color:#999; padding-left:0.25rem; font-size:0.93rem; font-weight: 450;}
+.post-title{color:#353535;font-size:2.5rem;margin:0.75rem 0; font-weight: 600; text-align: center;}
+.post-spans{color:#999; padding-left:0.25rem; font-size:0.94rem; font-weight: 450;  text-align: center;}
 .post-line{border-top:0.4rem solid #353535;display:block;margin:0 auto 3rem;width:4rem}
 .post-linex{border-top:0.4rem solid #353535;display:block;width:4rem}
 .post p{margin:0 0 1rem;}.post a:hover{text-decoration:underline}.post img{margin:0 auto 0.5rem}.post img+em{color:#aaa;display:block;font-size:0.9rem;font-style:normal;text-align:center}
