@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 12 Feb 2018 01:33:04 +0530</pubDate>
-    <lastBuildDate>Mon, 12 Feb 2018 01:33:04 +0530</lastBuildDate>
+    <pubDate>Mon, 12 Feb 2018 02:10:30 +0530</pubDate>
+    <lastBuildDate>Mon, 12 Feb 2018 02:10:30 +0530</lastBuildDate>
     <generator>Jekyll v3.7.2</generator>
     
       <item>
@@ -1028,20 +1028,21 @@ function closePopup(win, newID, newRepr, id) {
     
       <item>
         <title>How to integrate MailChimp on Django to increase Subscribers</title>
-        <description>&lt;p&gt;In this Post, we will discuss on how to integrate the MailChimp API to your Django Application. This API will help you to provide a platform to send emails to the audience who subscribes to your website, we will also discuss how to send a confirmation email for confirming the subscription using Threading because connecting with other API may take 2-3 second to connect. Using threads allows a program to run multiple operations concurrently in the same process space.&lt;/p&gt;
+        <description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this Post, we will discuss on how to integrate the MailChimp API to your Django Application. This API will help you to provide a platform to send emails to the audience who subscribes to your website, we will also discuss how to send a confirmation email for confirming the subscription using Threading because connecting with other API may take 2-3 second to connect. Using threads allows a program to run multiple operations concurrently in the same process space.&lt;/p&gt;
 
 &lt;p&gt;By MailChimp, you can send Beautiful Templated Message that will grow your Business by sending regular emails of your new product, news, post or whatever you want to promote. MailChimp is forever free but up to 2000 subscribers and 12,000 emails per month.&lt;/p&gt;
 
-&lt;p&gt;What is MailChimp
-MailChimp is an email marketing service and their features and integrations allow sending marketing emails, automated messages, and targeted campaigns. MailChimp has been around since 2001 and now more than 15 million people and businesses around the world use MailChimp.&lt;/p&gt;
+&lt;h2 id=&quot;what-is-mailchimp&quot;&gt;What is MailChimp&lt;/h2&gt;
+&lt;p&gt;MailChimp is an email marketing service and their features and integrations allow sending marketing emails, automated messages, and targeted campaigns. MailChimp has been around since 2001 and now more than 15 million people and businesses around the world use MailChimp.&lt;/p&gt;
 
-&lt;p&gt;Initial Setup
-First, of fall you need to Sign up and create your account at MailChimp. Go to the MailChimp website to register your website.&lt;/p&gt;
+&lt;h2 id=&quot;initial-setup&quot;&gt;Initial Setup&lt;/h2&gt;
+&lt;p&gt;First, of fall you need to Sign up and create your account at MailChimp. Go to the MailChimp website to register your website.&lt;/p&gt;
 
 &lt;p&gt;Fill up your details or credentials of your and your website and finally activate your account from the mail they sent you.&lt;/p&gt;
 
-&lt;p&gt;Create a List
-After complete registration with MailChimp, you will land to the Dashboard of MailChimp.&lt;/p&gt;
+&lt;h4 id=&quot;create-a-list&quot;&gt;Create a List&lt;/h4&gt;
+&lt;p&gt;After complete registration with MailChimp, you will land to the Dashboard of MailChimp.&lt;/p&gt;
 
 &lt;p&gt;Now we have to create a List. So click on the button of Create a List shown below, or by going to the List Panel from the menu bar and there after clicking on Create a list Button.&lt;/p&gt;
 
