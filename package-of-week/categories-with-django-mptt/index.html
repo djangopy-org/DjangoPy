@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Categories with django-mptt</title>
+  <meta name="description" content="In this tutorial, we will learn how to implement categories and breadcrumb in a Django site. Categories may be related to each other as child-parent, so cate...">
+
+<!--   <link rel="stylesheet" href="/css/main.css"> -->
+  <link rel="canonical" href="http://localhost:4000/package-of-week/categories-with-django-mptt/">
+  <link rel="alternate" type="application/rss+xml" title="DjangoPy" href="http://localhost:4000/feed.xml">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- Font Awesome CSS-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel = "stylesheet" href="/css/github.css">
+
+<!-- Fancybox-->
+<link rel="stylesheet" type="text/css" href="/fonts/fonts.min.css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css">
+<!-- theme stylesheet-->
+<link rel="stylesheet" href="/css/default.css" id="theme-stylesheet">
+<!-- Custom stylesheet - for your changes-->
+<link rel="stylesheet" href="/css/custom.css">
+<!-- Favicon-->
+<link rel="shortcut icon" href="/img/favicon1.ico">
+
+<!-- Javascript files-->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"> </script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+<script src="/js/front.js"></script>
+<script type="text/javascript" src = "/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+  <body>
+    <header class="header">
+  <!-- Main Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-toggleable-lg">
+    <div class="search-area">
+      <div class="search-area-inner d-flex align-items-center justify-content-center">
+        <div class="close-btn"><i class="fa fa-2x fa-times"></i></div>
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-8">
+            <form action="#">
+              <div class="form-group">
+                <input type="search" name="search" id="search" placeholder="What are you looking for?">
+                <button type="submit" class="submit"><i class="fa fa-search"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <!-- Navbar Brand -->
+      <div class="navbar-header d-flex align-items-center justify-content-between">
+        <!-- Navbar Brand --><a href="/" class="navbar-brand"><img src = "/img/djangopy_logo8.png" id = "logo"></a>
+        <!-- Toggle Button-->
+        <button type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarcollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span></span><span></span><span></span></button>
+      </div>
+      <!-- Navbar Menu -->
+      <div id="navbarcollapse" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link active ">Home</a>
+          </li>
+          <li class="nav-item"><a href="blog.html" class="nav-link ">Blog</a>
+          </li>
+          <li class="nav-item"><a href="post.html" class="nav-link ">Post</a>
+          </li>
+          <li class="nav-item"><a href="/contact" class="nav-link ">Contact</a>
+          </li>
+        </ul>
+        <div class="navbar-text"><a href="#" class="search-btn"><i class="fa fa-search"></i></a></div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <br>
+<div class="post">
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class = "col-md-9">
+<img class = "img-fluid" alt="" src="/img/categories-with-django-mptt/cover.jpg" title="" srcset="/assets/resized/480/cover.jpg 480w,/assets/resized/800/cover.jpg 800w,/img/categories-with-django-mptt/cover.jpg 1240w">
+
+    <h1 class="post-title">Categories with django-mptt</h1>
+    <h6 class = "post-spans">Posted: 30 July 2017 | Post By: Karan Suthar | 1k <i class = "fa fa-eye"></i>  | <i class = "fa fa-clock"></i> 7 min read | 15 <i class = "fa fa-comment"></i> </h6>
+    <br />
+    <div class = "post-content"> <p>In this tutorial, we will learn how to implement categories and breadcrumb in a Django site. Categories may be related to each other as child-parent, so categories are hierarchical data and to store and access them efficiently mptt i.e modified preorder tree traversal should be used in which the number of database queries made is minimum. There are some referral links provided at the end of the article to understand how CRUD operations are applied on hierarchical data efficiently.</p>
+
+<h2 id="installation">Installation</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">pip3 install django-mptt</code></pre></figure>
+
+<p>And add <strong>mptt</strong> in <strong>INSTALLED_APPS</strong> in <strong>settings.py</strong></p>
+
+<p>We will be implementing categories and breadcrumb for a blog website. So consider following models for my_posts app in Django project.</p>
+
+<h4 id="modelspy">Models.py</h4>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+<span class="kn">from</span> <span class="nn">mptt.models</span> <span class="kn">import</span> <span class="n">MPTTModel</span><span class="p">,</span> <span class="n">TreeForeignKey</span>
+
+<span class="k">class</span> <span class="nc">Post</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+  <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span>
+  <span class="n">category</span> <span class="o">=</span> <span class="n">TreeForeignKey</span><span class="p">(</span><span class="s">'Category'</span><span class="p">,</span><span class="n">null</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+  <span class="n">content</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="s">'Content'</span><span class="p">)</span>
+  <span class="n">slug</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">SlugField</span><span class="p">()</span>
+
+  <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">title</span></code></pre></figure>
+
+<h5 id="and-category-model-be-">And category model be :</h5>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Category</span><span class="p">(</span><span class="n">MPTTModel</span><span class="p">):</span>
+  <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+  <span class="n">parent</span> <span class="o">=</span> <span class="n">TreeForeignKey</span><span class="p">(</span><span class="s">'self'</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s">'children'</span><span class="p">,</span> <span class="n">db_index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+  <span class="n">slug</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">SlugField</span><span class="p">()</span>
+
+  <span class="k">class</span> <span class="nc">MPTTMeta</span><span class="p">:</span>
+    <span class="n">order_insertion_by</span> <span class="o">=</span> <span class="p">[</span><span class="s">'name'</span><span class="p">]</span>
+
+  <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+    <span class="n">unique_together</span> <span class="o">=</span> <span class="p">((</span><span class="s">'parent'</span><span class="p">,</span> <span class="s">'slug'</span><span class="p">,))</span>
+    <span class="n">verbose_name_plural</span> <span class="o">=</span> <span class="s">'categories'</span>
+
+  <span class="k">def</span> <span class="nf">get_slug_list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+      <span class="n">ancestors</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_ancestors</span><span class="p">(</span><span class="n">include_self</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+      <span class="n">ancestors</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">else</span><span class="p">:</span>
+      <span class="n">ancestors</span> <span class="o">=</span> <span class="p">[</span> <span class="n">i</span><span class="o">.</span><span class="n">slug</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">ancestors</span><span class="p">]</span>
+    <span class="n">slugs</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ancestors</span><span class="p">)):</span>
+      <span class="n">slugs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'/'</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ancestors</span><span class="p">[:</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]))</span>
+    <span class="k">return</span> <span class="n">slugs</span>
+
+  <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span></code></pre></figure>
+
+<p>Now run migration commands to create database tables. To show categories in admin panel add following to project_name/my_posts/admin.py</p>
+
+<h4 id="adminpy">Admin.py</h4>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">mptt.admin</span> <span class="kn">import</span> <span class="n">MPTTModelAdmin</span>
+
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Post</span><span class="p">,</span><span class="n">PostAdmin</span><span class="p">)</span>
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Category</span> <span class="p">,</span> <span class="n">MPTTModelAdmin</span><span class="p">)</span> </code></pre></figure>
+
+<p>Now run the following command to collect static files from mptt, provided that you’ve already defined STATIC_ROOT in settings.py</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">python3 manage.py collectstatic</code></pre></figure>
+
+<p>Doing these steps, you can now add some nested categories by selecting categories &gt; ADD  CATEGORY of my_posts app in Django Admin panel, there is an image below to illustrate how to create a category object.</p>
+
+<p><img class="img-fluid" alt="" src="/img/categories-with-django-mptt/1_cropped.jpg" title="" srcset="/assets/resized/480/1_cropped.jpg 480w,/assets/resized/800/1_cropped.jpg 800w,/img/categories-with-django-mptt/1_cropped.jpg 1366w" /></p>
+
+<p>After adding some categories, we have following category tree</p>
+
+<p><img class="img-fluid" alt="" src="/img/categories-with-django-mptt/2_cropped.jpg" title="" srcset="/assets/resized/480/2_cropped.jpg 480w,/assets/resized/800/2_cropped.jpg 800w,/img/categories-with-django-mptt/2_cropped.jpg 1366w" /></p>
+
+<p>If you want to change the indentation pixels i.e the space before each category object so that the relation between them can be determined easily, add the following line of code in settings.py</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">MPTT_ADMIN_LEVEL_INDENT</span> <span class="o">=</span> <span class="mi">20</span>   <span class="c">#you can replace 20 with some other number</span>
+                                 <span class="c">#to change indentation space</span></code></pre></figure>
+
+<p>The category tree showed above is not collapsable and expandable, you can tweak this by changing my_posts/admin.py as</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">mptt.admin</span> <span class="kn">import</span> <span class="n">DraggableMPTTAdmin</span>
+
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Post</span><span class="p">,</span><span class="n">PostAdmin</span><span class="p">)</span>
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Category</span><span class="p">,</span> <span class="n">DraggableMPTTAdmin</span> <span class="p">)</span>
+ 
+
+<span class="o">&lt;</span><span class="n">img</span> <span class="k">class</span> <span class="err">= "</span><span class="nc">img</span><span class="o">-</span><span class="n">fluid</span><span class="s">" alt="" src="</span><span class="o">/</span><span class="n">img</span><span class="o">/</span><span class="n">categories</span><span class="o">-</span><span class="k">with</span><span class="o">-</span><span class="n">django</span><span class="o">-</span><span class="n">mptt</span><span class="o">/</span><span class="mi">3</span><span class="n">_cropped</span><span class="o">.</span><span class="n">jpg</span><span class="s">" title="" srcset="</span><span class="o">/</span><span class="n">assets</span><span class="o">/</span><span class="n">resized</span><span class="o">/</span><span class="mi">480</span><span class="o">/</span><span class="mi">3</span><span class="n">_cropped</span><span class="o">.</span><span class="n">jpg</span> <span class="mi">480</span><span class="n">w</span><span class="p">,</span><span class="o">/</span><span class="n">assets</span><span class="o">/</span><span class="n">resized</span><span class="o">/</span><span class="mi">800</span><span class="o">/</span><span class="mi">3</span><span class="n">_cropped</span><span class="o">.</span><span class="n">jpg</span> <span class="mi">800</span><span class="n">w</span><span class="p">,</span><span class="o">/</span><span class="n">img</span><span class="o">/</span><span class="n">categories</span><span class="o">-</span><span class="k">with</span><span class="o">-</span><span class="n">django</span><span class="o">-</span><span class="n">mptt</span><span class="o">/</span><span class="mi">3</span><span class="n">_cropped</span><span class="o">.</span><span class="n">jpg</span> <span class="mi">1366</span><span class="n">w</span><span class="s">"&gt;</span></code></pre></figure>
+
+<p>Now go to posts &gt; ADD POST then you will find category drop-down to associate a category to that post, this field is not a required field so you may leave it untouched.</p>
+
+<p><img class="img-fluid" alt="" src="/img/categories-with-django-mptt/4_cropped.jpg" title="" srcset="/assets/resized/480/4_cropped.jpg 480w,/assets/resized/800/4_cropped.jpg 800w,/img/categories-with-django-mptt/4_cropped.jpg 1366w" /></p>
+
+<h4 id="urlspy">Urls.py</h4>
+<p>Next, we have to add URL pattern for the category, so go to urls.py and add the following line to the urlpatterns list.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">url</span><span class="p">(</span><span class="s">r'^category/(?P&lt;hierarchy&gt;.+)/$'</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">show_category</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'category'</span><span class="p">),</span></code></pre></figure>
+
+<h4 id="viewspy">Views.py</h4>
+<p>Now in views.py add the following function.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">show_category</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="n">hierarchy</span><span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+    <span class="n">category_slug</span> <span class="o">=</span> <span class="n">hierarchy</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">'/'</span><span class="p">)</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">root</span> <span class="o">=</span> <span class="n">Category</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="nb">all</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">slug</span> <span class="ow">in</span> <span class="n">category_slug</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">parent</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="n">slug</span> <span class="o">=</span> <span class="n">slug</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">instance</span> <span class="o">=</span> <span class="n">Category</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span><span class="n">slug</span><span class="o">=</span><span class="n">category_slug</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="n">instance</span> <span class="o">=</span> <span class="n">get_object_or_404</span><span class="p">(</span><span class="n">Post</span><span class="p">,</span> <span class="n">slug</span> <span class="o">=</span> <span class="n">category_slug</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s">"postDetail.html"</span><span class="p">,</span> <span class="p">{</span><span class="s">'instance'</span><span class="p">:</span><span class="n">instance</span><span class="p">})</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s">'categories.html'</span><span class="p">,</span> <span class="p">{</span><span class="s">'instance'</span><span class="p">:</span><span class="n">instance</span><span class="p">})</span>
+ </code></pre></figure>
+
+<h4 id="templatescategorieshtml">Templates/categories.html</h4>
+<p>Add following code in categories.html.</p>
+
+<figure class="highlight"><pre><code class="language-pythonx" data-lang="pythonx">{% extends 'base.html' %}
+{% load static  %}
+
+{% block head_title %} {{ instance.name }} {% endblock %}
+
+{% block content %}
+&lt;br&gt;
+&lt;div class="text-center"&gt;&lt;h2&gt;{{instance.name}}&lt;/h2&gt;&lt;/div&gt;
+
+{% if  instance.children.all %}
+    &lt;h4&gt;Sub Categories&lt;/h4&gt;
+    {% for i in instance.children.all %}
+        &lt;a href="{{ i.slug }}"&gt; {{ i.name }} &lt;/a&gt;&lt;br&gt;
+    {% endfor %}
+
+    &lt;br&gt;&lt;hr&gt;
+{% endif %}
+
+{% if  instance.post_set.all %}
+ {% for i in instance.post_set.all %}
+  &lt;h4&gt;Posts&lt;/h4&gt;
+  &lt;div class="row small-up-1 medium-up-3" &gt;
+
+   &lt;div class="column"&gt;
+    &lt;a href="{{ i.slug }}"&gt;
+      &lt;div class="card" style="width: 300px; border-color: black"&gt;
+         &lt;div class="card-divider"&gt;
+           &lt;strong&gt;{{ i.title | truncatechars:30}}&lt;/strong&gt;
+         &lt;/div&gt;
+
+         &lt;div class="card-section"&gt;
+          &lt;small&gt;{{ i.publish}} &lt;/small&gt;
+          &lt;p&gt;{{ i.content | safe | truncatechars_html:120 }}&lt;/p&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/a&gt;
+   &lt;/div&gt;
+{% endfor %}
+
+{% endif %}
+&lt;/div&gt;
+{% endblock %}</code></pre></figure>
+
+<p>The CSS framework used is Zurb’s Foundation 6 you may use bootstrap as well.</p>
+
+<p>Next,  add following code snippet inside the postDetail.html template to implement breadcrumbs in post detail page ( you should add it above post’s title ).</p>
+
+<figure class="highlight"><pre><code class="language-pythonx" data-lang="pythonx">{% load namify %}
+
+&lt;ul class="breadcrumbs"&gt;
+    &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+     
+    {% for i in instance.category.get_slug_list %}
+       &lt;li&gt;&lt;a href="/category/{{ i }}"&gt;{{ i | get_name }}&lt;/a&gt;&lt;/li&gt;
+    {% endfor %}
+
+&lt;/ul&gt; 
+ </code></pre></figure>
+
+<p>Note that filter get_name is used to extract the name of categories from the slug.</p>
+
+<p>To implement this filter create a directory templatetags at the same level as models.py, views.py, etc in my_post app and create a empty python file <strong>init</strong>.py to ensure the directory is treated as a Python package and create another python file namify.py, add following code in it.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django</span> <span class="kn">import</span> <span class="n">template</span>
+
+<span class="n">register</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">Library</span><span class="p">()</span>
+
+<span class="nd">@register.filter</span>
+<span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="n">spam</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">'/'</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>         <span class="c"># assume value be /python/web-scrapping</span>
+                                        <span class="c"># spam would be 'web-scrapping'</span>
+    <span class="n">spam</span> <span class="o">=</span> <span class="s">' '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">spam</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">'-'</span><span class="p">))</span>    <span class="c"># now spam would be 'web scrapping'</span>
+    <span class="k">return</span> <span class="n">spam</span></code></pre></figure>
+
+<p>Finally, we have following post detail page for recently created post</p>
+
+<p><img class="img-fluid" alt="" src="/img/categories-with-django-mptt/5_cropped.jpg" title="" srcset="/assets/resized/480/5_cropped.jpg 480w,/assets/resized/800/5_cropped.jpg 800w,/img/categories-with-django-mptt/5_cropped.jpg 1022w" /></p>
+
+<p>The breadcrumb above the title of the post is useful in navigation, for example, if you click web scrapping then it will take you to the catogories.html page where you can navigate posts in web scrapping as well as its sub categories as in the following image.</p>
+
+<p><img class="img-fluid" alt="" src="/img/categories-with-django-mptt/6_cropped.jpg" title="" srcset="/assets/resized/480/6_cropped.jpg 480w,/assets/resized/800/6_cropped.jpg 800w,/img/categories-with-django-mptt/6_cropped.jpg 982w" /></p>
+
+<h2 id="final-words">FINAL WORDS</h2>
+<p>Modified Preorder Tree Traversal is not just limited to categories but can also be used for efficiently accessing and storing hierarchical data. Although insert and move operations are not as efficient if the tree is changing frequently. However, overall mptt is currently the best solution for database queries overhead. If you have  any problem in any step discussed above, you can check our Github Repository from <a href="https://github.com/djangopy-org/django_mptt_categories">here</a>.</p>
+
+<h2 id="related-packages">RELATED PACKAGES</h2>
+
+<ul>
+  <li>django-categories</li>
+  <li>django-treenav
+ <br /> <br /></li>
+</ul>
+
+<h2 id="useful-links">USEFUL LINKS</h2>
+<p><a href="https://github.com/django-mptt/django-mptt">https://github.com/django-mptt/django-mptt</a></p>
+
+<p><a href="https://www.caktusgroup.com/blog/2016/01/04/modified-preorder-tree-traversal-django/">https://www.caktusgroup.com/blog/2016/01/04/modified-preorder-tree-traversal-django/</a></p>
+
+<p><a href="https://www.sitepoint.com/hierarchical-data-database/">https://www.sitepoint.com/hierarchical-data-database/</a></p>
+
+<p><a href="http://mikehillyer.com/articles/managing-hierarchical-data-in-mysql/">http://mikehillyer.com/articles/managing-hierarchical-data-in-mysql/</a></p>
+
+<p>Happy Coding :)</p>
+ </div>
+  </div>
+  </div>
+</div>
+</div>
+
+<!-- Latest Posts -->
+<section class="latest-posts" style="background-color: #F2F2F2;"> 
+  <div class="container">
+    <header> 
+      <h2 style="text-align:center;">Latest from the blog</h2>
+      <br>
+    </header>
+    <div class="row">
+              
+      <div class="post col-md-4">
+        <div class="post-thumbnail">
+          <a href="/jekyll-update/welcome-to-jekyll/">
+         <img class = "img-fluid" alt="" src="/img/post1.jpg" title="" srcset="/assets/resized/480/post1.jpg 480w,/assets/resized/800/post1.jpg 800w,/assets/resized/1400/post1.jpg 1400w,/img/post1.jpg 1920w">
+
+        </a>
+      </div>
+        <div class="post-details">
+          <div class="post-meta d-flex justify-content-between">
+            <div class="date">01 February 2018</div>
+            <div class="category"><a href="#">jekyll update</a></div>
+          </div><a href="/jekyll-update/welcome-to-jekyll/" class = "catalogue-item" style="text-decoration: none; padding: 2px 0 8px 0;">
+                    <h4>Welcome to Jekyll!</h4>
+        <div class="catalogue-line" style="padding-bottom:5px;"></div>
+          <p class="text-muted">You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways,...</p>
+        </div></a>
+      </div>
+              
+      <div class="post col-md-4">
+        <div class="post-thumbnail">
+          <a href="/learn/set-up-authentication-system-in-django-in-just-10-minutes/">
+         <img class = "img-fluid" alt="" src="/img/set-up-authentication-system-in-django-in-just-10-minutes/cover.jpg" title="" srcset="/assets/resized/480/cover.jpg 480w,/assets/resized/800/cover.jpg 800w,/img/set-up-authentication-system-in-django-in-just-10-minutes/cover.jpg 1240w">
+
+        </a>
+      </div>
+        <div class="post-details">
+          <div class="post-meta d-flex justify-content-between">
+            <div class="date">03 October 2017</div>
+            <div class="category"><a href="#">learn</a></div>
+          </div><a href="/learn/set-up-authentication-system-in-django-in-just-10-minutes/" class = "catalogue-item" style="text-decoration: none; padding: 2px 0 8px 0;">
+                    <h4>Set-up Authentication System in Django in just 10 minutes</h4>
+        <div class="catalogue-line" style="padding-bottom:5px;"></div>
+          <p class="text-muted">In this post, we will discuss Authentication System in Django. We will be discussing the most abstract way to how to implement on your Django Project in just simple steps....</p>
+        </div></a>
+      </div>
+              
+      <div class="post col-md-4">
+        <div class="post-thumbnail">
+          <a href="/package-of-week/categories-with-django-mptt/">
+         <img class = "img-fluid" alt="" src="/img/categories-with-django-mptt/cover.jpg" title="" srcset="/assets/resized/480/cover.jpg 480w,/assets/resized/800/cover.jpg 800w,/img/categories-with-django-mptt/cover.jpg 1240w">
+
+        </a>
+      </div>
+        <div class="post-details">
+          <div class="post-meta d-flex justify-content-between">
+            <div class="date">30 July 2017</div>
+            <div class="category"><a href="#">package-of-the-week</a></div>
+          </div><a href="/package-of-week/categories-with-django-mptt/" class = "catalogue-item" style="text-decoration: none; padding: 2px 0 8px 0;">
+                    <h4>Categories with django-mptt</h4>
+        <div class="catalogue-line" style="padding-bottom:5px;"></div>
+          <p class="text-muted">In this post, we'll learn how to implement categories in Django efficiently by storing hierarchical data in place of making many database queries since database queries are costly in terms...</p>
+        </div></a>
+      </div>
+    
+    </div>
+  </div>
+</section>
+
+
+      </div>
+    </div>
+    <center>
+
+<section class="section--subscribe">
+  <div class="container">
+      <div class="row h-100 justify-content-center align-items-center">
+    <h3 class="u-alignCenter">Stay in touch</h3>
+    <p>
+    	
+      Hi, I'm <a href="/mickey/about/">Your Name</a>. A short description of your blog. Mickey is a minimal one-column theme for Jekyll. It's designed and developed by <a href="http://github.com/vincentchan" target="_blank">@VincentChan</a>. 
+    </p>
+    <div class="newsletterForm-wrapper">
+      <!-- Begin MailChimp Signup Form -->
+      <div id="mc_embed_signup">
+        <form action="{ get this from MailChimp }" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+            <div class="mc-field-group">
+              <input type="email" value="" name="EMAIL" class="textInput textInput--large" id="mce-EMAIL" placeholder="Your email address">
+            </div>
+            <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;"><input type="text" name="{ get this from MailChimp }" tabindex="-1" value=""></div>
+            <div class="clear u-alignCenter"><input type="submit" value="Get new blog posts by email" name="subscribe" id="mc-embedded-subscribe" class="button-x button--primary"></div>
+          </div>
+        </form>
+         </div>
+      </div>
+      <!--End mc_embed_signup-->
+    </div>
+    <hr/>
+  </div>
+</section>
+
+</center>
+
+<footer class="section--footer">
+  <div class="container container--content">
+    <div>
+      <a href="/mickey/humans.txt">Hand-crafted</a> by <a href="/mickey/about/">Your Name</a>
+    </div>
+    <ul class="socialAccountList row h-100 justify-content-center align-items-center">
+        <li><a href="http://twitter.com/username" class="socialAccount socialAccount--twitter" target="_blank"></a></li>
+        <li><a href="http://facebook.com/username" class="socialAccount socialAccount--facebook" target="_blank"></a></li>
+        <li><a href="http://www.linkedin.com/in/username" class="socialAccount socialAccount--github" target="_blank"></a></li>
+        <li><a href="http://www.linkedin.com/in/username" class="socialAccount socialAccount--google" target="_blank"></a></li>
+        <li><a href="http://www.linkedin.com/in/username" class="socialAccount socialAccount--mail" target="_blank"></a></li>
+    </ul>
+    <div>
+      © 2015 All Rights Reserved. Powered by the <a href="https://github.com/vincentchan/mickey" target="_blank">Mickey theme</a> for Jekyll.
+    </div>
+  </div>
+</footer>
+
+  </body>
+
+</html>
