@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 12 Feb 2018 02:18:11 +0530</pubDate>
-    <lastBuildDate>Mon, 12 Feb 2018 02:18:11 +0530</lastBuildDate>
+    <pubDate>Mon, 12 Feb 2018 02:33:04 +0530</pubDate>
+    <lastBuildDate>Mon, 12 Feb 2018 02:33:04 +0530</lastBuildDate>
     <generator>Jekyll v3.7.2</generator>
     
       <item>
@@ -728,6 +728,55 @@ body {
         
         
         <category>package-of-the-week</category>
+        
+      </item>
+    
+      <item>
+        <title>How to Implement Categories in Django</title>
+        <description>&lt;p&gt;Categories are essential for any website because it is easy for users to access content sorted by categories. Categories may have their subcategories, and subcategories may also have subcategories and so on. So in this post, I’ll explain how to implement nested categories in a Django project. You can create categories with Django Admin Panel and then associate it with content like an article or post, So let’s get started.&lt;/p&gt;
+
+&lt;p&gt;Let’s implement categories for blog posts, consider my_posts app in the project, add following models in it&lt;/p&gt;
+
+&lt;p&gt;CONCLUSION&lt;/p&gt;
+
+&lt;p&gt;Although this approach is not most efficient because we are making many database queries, but for small websites and blogs this approach is good to go. If you are working on some projects like a news website or e-commerce website which contain many level of nested categories then you may want to find a comparatively efficient way to implement category with Modified Preorder Tree Traversal (MPTT), there is Django package available for it, read a post on how to implement categories with django-mptt here.&lt;/p&gt;
+
+&lt;p&gt;If you have any query let me know in the comments below.&lt;/p&gt;
+
+&lt;p&gt;Happy coding :)&lt;/p&gt;
+</description>
+        <pubDate>Sat, 08 Jul 2017 17:23:56 +0530</pubDate>
+        <link>http://localhost:4000/how-to/how-to-implement-categories-in-django</link>
+        <guid isPermaLink="true">http://localhost:4000/how-to/how-to-implement-categories-in-django</guid>
+        
+        <category>Django-breadcrumbs</category>
+        
+        <category>how-to-implement-categories-in-django</category>
+        
+        <category>Implement-Categories-in-Django</category>
+        
+        <category>Modified-Preorder-Tree</category>
+        
+        <category>Traversal-MPTT</category>
+        
+        <category>Modified-Preorder-Tree-Traversal-Django</category>
+        
+        <category>categories-in-django</category>
+        
+        <category>django-categories</category>
+        
+        <category>nested</category>
+        
+        <category>categories</category>
+        
+        <category>DjangoPy-Foundation</category>
+        
+        <category>django</category>
+        
+        <category>sub-categories</category>
+        
+        
+        <category>how-to</category>
         
       </item>
     

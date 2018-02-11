@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>DjangoPy</title>
-  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-">
+  <title>How to Implement Categories in Django</title>
+  <meta name="description" content="Categories are essential for any website because it is easy for users to access content sorted by categories. Categories may have their subcategories, and su...">
 
 <!--   <link rel="stylesheet" href="/css/main.css"> -->
-  <link rel="canonical" href="http://localhost:4000/blog/page2/">
+  <link rel="canonical" href="http://localhost:4000/how-to/how-to-implement-categories-in-django">
   <link rel="alternate" type="application/rss+xml" title="DjangoPy" href="http://localhost:4000/feed.xml">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -90,82 +89,35 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <!-- Hero Section-->
-   <!-- Hero Section-->
-    <section style="background: url(/img/cover.jpeg); background-size: cover; background-position: center center" class="hero">
-      <div class="container">
-            <center><h1>A Blog for Django Developers</h1></center>
-      </div>
-    </section>
+        <br>
+<div class="post">
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class = "col-md-9">
+<img class = "img-fluid" alt="" src="/img/introduction-to-django/code-pc-sublime-img.jpg" title="" srcset="/assets/resized/480/code-pc-sublime-img.jpg 480w,/assets/resized/800/code-pc-sublime-img.jpg 800w,/img/introduction-to-django/code-pc-sublime-img.jpg 940w">
 
-<!-- Intro Section-->
-<section class="intro">
-  <div class="container">
+	<br><br>
+    <h1 class="post-title" style="margin-top:15px;">How to Implement Categories in Django</h1>
+    <h6 class = "post-spans">Posted: 08 July 2017 | Post By: Karan Suthar | 1k <i class = "fa fa-eye"></i>  | <i class = "fa fa-clock"></i> 1 min read | 15 <i class = "fa fa-comment"></i> </h6>
+   <br> <hr /><br>
+    <div class = "post-content"> <p>Categories are essential for any website because it is easy for users to access content sorted by categories. Categories may have their subcategories, and subcategories may also have subcategories and so on. So in this post, I’ll explain how to implement nested categories in a Django project. You can create categories with Django Admin Panel and then associate it with content like an article or post, So let’s get started.</p>
 
-    <h2 class="h3">Never stop learning with DJANGO<span class="py-color">PY<span></h2>
-      <p class="text-big">We were on a little break for quite some time. Now, we are back again with the new <strong>inspiration</strong>, new <strong>design</strong>, new <strong>ideas</strong>, but with the same aim of <strong>promoting Django</strong>. We hope you'll love and enjoy the content :)</p>
+<p>Let’s implement categories for blog posts, consider my_posts app in the project, add following models in it</p>
 
-    </div>
-  </section>
-  <section class="featured-posts no-padding-top">
-    <div class="container">
-      <!-- Post-->
+<p>CONCLUSION</p>
 
-      
-      <a href="/how-to/pagination-with-django" class="catalogue-item">
-        <div>
-          <p>31 May 2017</p>
-          <h1 class="catalogue-title">Pagination with Django</h1>
-          <div class="catalogue-line"></div>
-          <p>
-          Django provides a few classes that can help you to manage your paginated data i.e., data that’s split across several pages, with “Previous/Next” links or list it into discrete page numbers.</p>
-        </div>
-      </a>
-      
-      <a href="/learn/getting-started-with-django/" class="catalogue-item">
-        <div>
-          <p>20 May 2017</p>
-          <h1 class="catalogue-title">Getting started with Django</h1>
-          <div class="catalogue-line"></div>
-          <p>
-          After too much motivation, now it's time to get started with Django. To develop your Django-powered site, you first need to install Python on your system. It is highly recommended to install the latest version of Python.</p>
-        </div>
-      </a>
-      
-      <a href="/learn/introduction-to-django/" class="catalogue-item">
-        <div>
-          <p>08 May 2017</p>
-          <h1 class="catalogue-title">Introduction to Django</h1>
-          <div class="catalogue-line"></div>
-          <p>
-          Django is a high-level Python Web Framework which is absolutely free and open source. Django encourages rapid development, clean and pragmatic design, it also emphasis on the principle of don't repeat yourself, and reusability of code.</p>
-        </div>
-      </a>
-      
-      <br>  <br>
-      <!-- Pagination links -->
-      <span class="page_number ">Page: 2 of 2</span>
-        <br><br>
-      <div class="pagination">
+<p>Although this approach is not most efficient because we are making many database queries, but for small websites and blogs this approach is good to go. If you are working on some projects like a news website or e-commerce website which contain many level of nested categories then you may want to find a comparatively efficient way to implement category with Modified Preorder Tree Traversal (MPTT), there is Django package available for it, read a post on how to implement categories with django-mptt here.</p>
 
-        
-        <li class="page-item">
-          <a class="page-link" href="/">Previous</a>
-        </li>
-        
-        
-        <li class="page-item">
-          <a class="page-link">Next</a>
-        </li>
-        
-      </div>
+<p>If you have any query let me know in the comments below.</p>
 
-    </div>
-  </section>
+<p>Happy coding :)</p>
+ </div>
+  </div>
+  </div>
+</div>
+</div>
 
-
-
-  <!-- Latest Posts -->
+<!-- Latest Posts -->
 <section class="latest-posts" style="background-color: #F2F2F2;"> 
   <div class="container">
     <header> 
