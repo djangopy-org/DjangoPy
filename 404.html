@@ -6,12 +6,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About</title>
+  <title>Page 404</title>
   <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-">
+ ">
+
+	<!-- Search Engine -->
+	<meta name="description" content="  DjangoPy is not just another Django website. We provide great, quality tutorials and support for the development of Django community.">
+	<meta name="image" content="/img/djangopy.png">
+	<!-- Schema.org for Google -->
+	<meta itemprop="name" content="DjangoPy - Learn, Code, Implement">
+	<meta itemprop="description" content="  DjangoPy is not just another Django website. We provide great, quality tutorials and support for the development of Django community.">
+	<meta itemprop="image" content="https://djangopy.org/">
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="DjangoPy - Learn, Code, Implement">
+	<meta name="twitter:description" content="  DjangoPy is not just another Django website. We provide great, quality tutorials and support for the development of Django community.">
+	<!-- Open Graph general (Facebook, Pinterest & Google+) -->
+	<meta name="og:title" content="DjangoPy - Learn, Code, Implement">
+	<meta name="og:description" content="  DjangoPy is not just another Django website. We provide great, quality tutorials and support for the development of Django community.">
+	<meta name="og:url" content="https://djangopy.org/">
+	<meta name="og:site_name" content="DjangoPy">
+	<meta name="og:locale" content="en_US">
+	<meta name="og:type" content="website">
+
 
 <!--   <link rel="stylesheet" href="/css/main.css"> -->
-  <link rel="canonical" href="http://localhost:4000/about/">
+  <link rel="canonical" href="http://localhost:4000/404">
   <link rel="alternate" type="application/rss+xml" title="DjangoPy" href="http://localhost:4000/feed.xml">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -21,7 +41,7 @@
 <link rel = "stylesheet" href="/css/github.css">
 
 <!-- Fancybox-->
-<link rel="stylesheet" type="text/css" href="/fonts/fonts.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/fonts/fonts.min.css" />
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css">
 <!-- theme stylesheet-->
@@ -74,9 +94,9 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a href="/" class="nav-link active ">Home</a>
           </li>
-          <li class="nav-item"><a href="#" class="nav-link ">Blog</a>
+          <li class="nav-item"><a href="/about" class="nav-link ">About</a>
           </li>
-          <li class="nav-item"><a href="#" class="nav-link ">Post</a>
+          <li class="nav-item"><a href="/" class="nav-link ">Posts</a>
           </li>
           <li class="nav-item"><a href="/contact" class="nav-link ">Contact</a>
           </li>
@@ -90,19 +110,57 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <article class="post">
+        <style type="text/css">
+.error {
+  margin: 0 auto;
+  text-align: center;
+  min-height: 400px;
+}
 
-  <header class="post-header">
-    <h1 class="post-title">About</h1>
-  </header>
+.error-code {
+  bottom: 60%;
+  color: #2d353c;
+  font-size: 96px;
+  line-height: 100px;
+}
 
-  <div class="post-content">
-    <p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="http://jekyllrb.com/">jekyllrb.com</a></p>
+.error-desc {
+  font-size: 12px;
+  color: #647788;
+}
+
+.m-b-10 {
+  margin-bottom: 10px!important;
+}
+
+.m-b-20 {
+  margin-bottom: 20px!important;
+}
+
+.m-t-20 {
+  margin-top: 20px!important;
+}
+
+</style>
 
 
-  </div>
+<div class="error">
+	<br><br>
+    <div class="error-code m-b-10 m-t-20">404 <i class="fa fa-warning"></i></div>
+    <h3 class="font-bold">We couldn't find the page..</h3>
 
-</article>
+    <div class="error-desc">
+        Sorry, but the page you are looking for was either not found or does not exist. <br/>
+        Try refreshing the page or click the button below to go back to the Homepage.
+        <div>
+            <a class=" login-detail-panel-button btn" href="/">
+                    <i class="fa fa-arrow-left"></i>
+                    Go back to Homepage                        
+                </a>
+        </div>
+    </div>
+</div>
+<hr>
 
       </div>
     </div>
@@ -158,22 +216,10 @@
     <div>
       © 2018 All Rights Reserved
     </div>
+    <center><a href = "/terms-of-services" target = "_self">Term of Service</a> | <a href="privacy-policy" target="_self">Privacy Policy</a> | <a href = "disclaimer" target = "_self">Disclaimer |</a> <a href = "/sitemap.xml" target="_self">Sitemap</a></center>
   </div>
 </footer>
 
   </body>
 
 </html>
-
-<script type="text/javascript">
-      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      var disqus_shortname = 'django-py';
-      // var disqus_developer = 1; // Comment out when the site is live
-
-      (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-      }());
-    </script>

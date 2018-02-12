@@ -2,43 +2,106 @@
 <html>
 
   <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>How to Implement Categories in Django</title>
-  <meta name="description" content="IntroductionCategories are essential for any website because it is easy for users to access content sorted by categories. Categories may have their subcatego...">
+	<!-- COMMON TAGS -->
+	<title>How to Implement Categories in Django | DjangoPy</title>
+	<!-- Search Engine -->
+	<meta property="description" content="In this tutorial, we'll learn how to implement categories and subcategories in our Django project without using any external module.">
+	<meta property="image" content="https://djangopy.org/static/images/footer_logo.png">
+	<!-- Schema.org for Google -->
 
-<!--   <link rel="stylesheet" href="/css/main.css"> -->
-  <link rel="canonical" href="http://localhost:4000/how-to/how-to-implement-categories-in-django">
-  <link rel="alternate" type="application/rss+xml" title="DjangoPy" href="http://localhost:4000/feed.xml">
+	<!-- Open Graph general (Facebook, Pinterest & Google+) -->
+	<meta property="og:title" content="How to Implement Categories in Django | DjangoPy">
+	<meta property="og:description" content="In this tutorial, we'll learn how to implement categories and subcategories in our Django project without using any external module.">
+	<meta property="og:image" content="https://djangopy.org">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<!-- Font Awesome CSS-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta property="og:url" content="https://djangopy.org/how-to/how-to-implement-categories-in-django">
+	<meta property="og:site_name" content="DjangoPy">
+	<meta property="og:locale" content="en_US">
+	<meta property="fb:admins" content="https://www.facebook.com/djangopy.org">
+	<meta property="og:type" content="article">
 
-<link rel = "stylesheet" href="/css/github.css">
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary">
+	<meta property="twitter:title" content="How to Implement Categories in Django | DjangoPy">
+	<meta property="twitter:description" content="In this tutorial, we'll learn how to implement categories and subcategories in our Django project without using any external module.">
+	<meta property="twitter:site" content="@DjangoPy_Admin">
+	<meta property="twitter:creator" content="@DjangoPy_Admin">
+	<meta property="twitter:image:src" content="img/how-to-implement-categories-in-django/cover.jpg">
+	<!-- Twitter - Article -->
 
-<!-- Fancybox-->
-<link rel="stylesheet" type="text/css" href="/fonts/fonts.min.css" />
+	<!-- Open Graph - Article -->
+	<meta property="article:section" content="how-to">
+	<meta property="article:published_time" content="2017-07-08 17:23:56 +0530">
+	<meta properry="article:author" content="https://www.facebook.com/djangopy.org">
+	<meta property="article:modified_time" content="2017-07-08 17:23:56 +0530">
+	
+	<meta property="article:tag" content="Django-breadcrumbs"/>
+	
+	<meta property="article:tag" content="how-to-implement-categories-in-django"/>
+	
+	<meta property="article:tag" content="Implement-Categories-in-Django"/>
+	
+	<meta property="article:tag" content="Modified-Preorder-Tree"/>
+	
+	<meta property="article:tag" content="Traversal-MPTT"/>
+	
+	<meta property="article:tag" content="Modified-Preorder-Tree-Traversal-Django"/>
+	
+	<meta property="article:tag" content="categories-in-django"/>
+	
+	<meta property="article:tag" content="django-categories"/>
+	
+	<meta property="article:tag" content="nested"/>
+	
+	<meta property="article:tag" content="categories"/>
+	
+	<meta property="article:tag" content="DjangoPy-Foundation"/>
+	
+	<meta property="article:tag" content="django"/>
+	
+	<meta property="article:tag" content="sub-categories"/>
+	
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css">
-<!-- theme stylesheet-->
-<link rel="stylesheet" href="/css/default.css" id="theme-stylesheet">
-<!-- Custom stylesheet - for your changes-->
-<link rel="stylesheet" href="/css/custom.css">
-<!-- Favicon-->
-<link rel="shortcut icon" href="/img/favicon1.ico">
+	<meta property="revisit-after" content="2 days" />
+	<meta property="distribution" content="web" />
+	<meta property="article:publisher" content="https://www.facebook.com/djangopy.org/"/>
+	<meta name="description" content="In this tutorial, we'll learn how to implement categories and subcategories in our Django project without using any external module."/>
 
-<!-- Javascript files-->
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"> </script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script type="text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
-<script src="/js/front.js"></script>
-<script type="text/javascript" src = "/js/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+
+	<!--   <link rel="stylesheet" href="/css/main.css"> -->
+	<link rel="canonical" href="http://localhost:4000/how-to/how-to-implement-categories-in-django">
+	<link rel="alternate" type="application/rss+xml" title="DjangoPy" href="http://localhost:4000/feed.xml">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- Font Awesome CSS-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel = "stylesheet" href="/css/github.css">
+
+	<!-- Fancybox-->
+<link rel="stylesheet" type="text/css" href="/css/fonts/fonts.min.css" />
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css">
+	<!-- theme stylesheet-->
+	<link rel="stylesheet" href="/css/default.css" id="theme-stylesheet">
+	<!-- Custom stylesheet - for your changes-->
+	<link rel="stylesheet" href="/css/custom.css">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="/img/favicon1.ico">
+
+	<!-- Javascript files-->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"> </script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script type="text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+	<script src="/js/front.js"></script>
+	<script type="text/javascript" src = "/js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 
 </head>
 
@@ -73,9 +136,9 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a href="/" class="nav-link active ">Home</a>
           </li>
-          <li class="nav-item"><a href="#" class="nav-link ">Blog</a>
+          <li class="nav-item"><a href="/about" class="nav-link ">About</a>
           </li>
-          <li class="nav-item"><a href="#" class="nav-link ">Post</a>
+          <li class="nav-item"><a href="/" class="nav-link ">Posts</a>
           </li>
           <li class="nav-item"><a href="/contact" class="nav-link ">Contact</a>
           </li>
@@ -338,7 +401,7 @@ python3 manage.py migrate</code></pre></figure>
 
 <p>Happy coding :)</p>
  </div>
-
+<br><hr><br>
 
 
 <div id="disqus_thread"></div>
@@ -356,7 +419,7 @@ python3 manage.py migrate</code></pre></figure>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
-
+<br><hr><br>
   </div>
   </div>
 </div>
@@ -487,12 +550,14 @@ python3 manage.py migrate</code></pre></figure>
     <div>
       © 2018 All Rights Reserved
     </div>
+    <center><a href = "/terms-of-services" target = "_self">Term of Service</a> | <a href="privacy-policy" target="_self">Privacy Policy</a> | <a href = "disclaimer" target = "_self">Disclaimer |</a> <a href = "/sitemap.xml" target="_self">Sitemap</a></center>
   </div>
 </footer>
 
   </body>
 
 </html>
+
 
 <script type="text/javascript">
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -506,3 +571,4 @@ python3 manage.py migrate</code></pre></figure>
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
       }());
     </script>
+
