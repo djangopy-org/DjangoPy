@@ -6,6 +6,7 @@
   ga('create', 'UA-98271390-1', 'auto');
   ga('send', 'pageview');
 
+  
 
 /*global $, document, Chart, LINECHART, data, options, window, setTimeout*/
 $(document).ready(function () {
