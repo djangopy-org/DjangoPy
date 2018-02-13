@@ -14,8 +14,9 @@ $(document).ready(function(){
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
    var url = $("#ga-page-view").attr("ga-page-url");
+   var access_token = "1089848382316-lvl2f9v4fjahlonlgfujl1aacickprku.apps.googleusercontent.com";
     $.ajax({
-        url: "https://www.googleapis.com/analytics/v3/data/ga?ids=ga:149217150&start-date=2017-03-01&end-date=today&metrics=ga:pageviews&dimensions=ga:pagePath&filters=ga:pagePath==" + url + "&access_token=ya29.GlxhBcksq383tGURRaGyXdkG5s5-evvzeLkyRmo2jRW4CKbj0zJcV9mGkGrlo_SgvODYDE6EjKV4fGnOpuseWG2OtX21ArwMeNcr1t5pSZGaGorlAedYoy8VSj3fhQ",
+        url: "https://www.googleapis.com/analytics/v3/data/ga?ids=ga:149217150&start-date=2017-03-01&end-date=today&metrics=ga:pageviews&dimensions=ga:pagePath&filters=ga:pagePath==" + url + "&access_token=" + access_token,
         dataType: "json",
         type: "GET",
         timeout: 1000 * 10, // 30 sec
@@ -24,7 +25,7 @@ $(document).ready(function(){
         },
         error: function() {
             $.ajax({
-                url: '/blog/pageview.json',
+                url: '/pageview.json',
                 dataType: 'json',
                 success: function(data) {
                     processPageView(data.rows);
