@@ -14,7 +14,7 @@ $(document).ready(function(){
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
    var url = $("#ga-page-view").attr("ga-page-url");
-   var access_token = "1089848382316-lvl2f9v4fjahlonlgfujl1aacickprku.apps.googleusercontent.com";
+   var access_token = "AIzaSyDt-388rvgaIp8YqPEAKSWvIkdwZlXPNSY";
     $.ajax({
         url: "https://www.googleapis.com/analytics/v3/data/ga?ids=ga:149217150&start-date=2017-03-01&end-date=today&metrics=ga:pageviews&dimensions=ga:pagePath&filters=ga:pagePath==" + url + "&access_token=" + access_token,
         dataType: "json",
