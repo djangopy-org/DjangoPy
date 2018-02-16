@@ -1,17 +1,48 @@
 // google analytics
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-98271390-1', 'auto');
-  ga('send', 'pageview');
+var data = {};
 
-  
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-98271390-1', 'auto');
+ga('send', 'pageview');
+
+
+function processPageView(rows){
+    $.map(rows, function(val){
+      data[val[0]] = val[1];
+    })
+    var url = $("#ga-page-view").attr("ga-page-url");
+    $("#ga-page-view").text(data[url]);
+    $(".ga-page-view").each(function(i, val){
+        url = $(this).attr("ga-page-url");
+        $(this).text(data[url]);
+    })
+}
+
 
 /*global $, document, Chart, LINECHART, data, options, window, setTimeout*/
 $(document).ready(function () {
-
     'use strict';
+
+    $.ajax({
+        url: "/pageviews.json", 
+        dataType: "json",
+        timeout: 1000 * 10, // 30 sec
+        success: function(data) {
+            processPageView(data.rows);
+        },
+        error: function() {
+          console.log("Error in fetching views")
+        }
+    });  
+
+
+
+
+
+
 
     // ------------------------------------------------------- //
     // For demo purposes only
@@ -98,6 +129,7 @@ $(document).ready(function () {
     $('.search-btn').on('click', function (e) {
         e.preventDefault();
         $('.search-area').fadeIn();
+        $("#search").focus();
     });
     $('.search-area .close-btn').on('click', function () {
         $('.search-area').fadeOut();
