@@ -32,7 +32,16 @@ $(document).ready(function () {
 
 
 
-
+    $(".post-content a").each(function(i, ele){
+        if( $(ele).parent().is("h1")  || $(ele).parent().is("h2") || $(ele).parent().is("h3") ){
+            $(this).css("text-decoration", "none");
+            $(this).css("color", "#212529");
+        }
+        else{
+            $(ele).attr("target", "_blank");
+        }
+        
+    })
 
 
 

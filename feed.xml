@@ -5,8 +5,8 @@
     <description>DjangoPy is not just another Django website. We provide great, quality tutorials and support for the development of Django community.</description>
     <link>https://djangopy.org/</link>
     <atom:link href="https://djangopy.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 17 Feb 2018 23:02:55 +0530</pubDate>
-    <lastBuildDate>Sat, 17 Feb 2018 23:02:55 +0530</lastBuildDate>
+    <pubDate>Sat, 17 Feb 2018 23:39:20 +0530</pubDate>
+    <lastBuildDate>Sat, 17 Feb 2018 23:39:20 +0530</lastBuildDate>
     <generator>Jekyll v3.7.2</generator>
     
       <item>
@@ -338,7 +338,7 @@ Configuration -&amp;gt;
 &lt;p&gt;Now go to your Django Admin and create a &lt;strong&gt;Periodic Task&lt;/strong&gt; as follows&lt;/p&gt;
 
 &lt;p&gt;Choose any name, and select the task which you have created, and also create a Crontab according to your need.
-Please refer the guide or some of the examples of Crontab from &lt;a href=&quot;http://docs.celeryproject.org/en/latest/userguide/periodic-tasks.html#crontab-schedules&quot; target=&quot;_blank&quot;&gt;here. &lt;/a&gt;&lt;/p&gt;
+Please refer the guide or some of the examples of Crontab from &lt;a href=&quot;http://docs.celeryproject.org/en/latest/userguide/periodic-tasks.html#crontab-schedules&quot;&gt;here. &lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img class=&quot;img-fluid&quot; alt=&quot;&quot; src=&quot;/img/handle-asynchronous-tasks-with-celery-and-django/img1.png&quot; title=&quot;&quot; srcset=&quot;/assets/resized/480/img1.png 480w,/assets/resized/800/img1.png 800w,/img/handle-asynchronous-tasks-with-celery-and-django/img1.png 1366w&quot; /&gt;&lt;/p&gt;
 
