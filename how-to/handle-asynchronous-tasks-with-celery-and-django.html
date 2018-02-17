@@ -160,7 +160,7 @@ ga('send', 'pageview');
 
 	<br><br>
     <h1 class="post-title" style="margin-top:15px;">Handle Asynchronous Tasks using celery and Django</h1>
-    <h6 class = "post-spans">Posted: 16 February 2018 | Post By: Jai Singhal | <span id = "ga-page-view" ga-page-url = /how-to/handle-asynchronous-tasks-with-celery-and-django></span> <i class = "fa fa-eye"></i>  | <i class = "fa fa-clock"></i> 9 min read | <a style="text-decoration: none;" href="/how-to/handle-asynchronous-tasks-with-celery-and-django.html#disqus_thread" data-disqus-identifier="/how-to/handle-asynchronous-tasks-with-celery-and-django"><i class = "fa fa-comment"></i></a>  </h6>
+    <h6 class = "post-spans">Posted: 16 February 2018 | Post By: Jai Singhal | <span id = "ga-page-view" ga-page-url = /how-to/handle-asynchronous-tasks-with-celery-and-django></span> <i class = "fa fa-eye"></i>  | <i class = "fa fa-clock"></i> 10 min read | <a style="text-decoration: none;" href="/how-to/handle-asynchronous-tasks-with-celery-and-django.html#disqus_thread" data-disqus-identifier="/how-to/handle-asynchronous-tasks-with-celery-and-django"><i class = "fa fa-comment"></i></a>  </h6>
    <br> <hr /><br>
     <div class = "post-content"> <h2 id="introduction">Introduction</h2>
 <p>We offen need something that schedule some tasks and run the some tasks periodically or handling the long tasks asynchronously, these all things can achieved by using Celery in Django Project.</p>
@@ -506,11 +506,25 @@ Run the celery beat process in new terminal with <strong>–scheduler</strong></
 
 <hr />
 <p><br /></p>
+
+<h2 id="running-on-production">Running on Production</h2>
+
+<p>Now that celery is perfectly running locally, last thing we need to take care of the production. A question arises here that how we can run these process terminals together for all the time in our Production server, becuase we need to run both the process(beat and worker) to keep the celery working.</p>
+
+<p>So here Supervisor comes in handy that helps to run both of the instances seperately.</p>
+
+<p>Supervisor is a client/server system that allows its users to control and keeps it running the process in any unix-like Operating System. So we can use this, for runing celery processes.</p>
+
+<p><a href="http://supervisord.org/">Here</a> is the documentation for the Supervisor.</p>
+
+<hr />
+<p><br /></p>
 <h2 id="resources">Resources</h2>
 <ul>
   <li><a href="http://docs.celeryproject.org/en/latest/getting-started/first-steps-with-celery.html">http://docs.celeryproject.org/en/latest/getting-started/first-steps-with-celery.html</a></li>
   <li><a href="http://docs.celeryproject.org/en/latest/django/first-steps-with-django.html">http://docs.celeryproject.org/en/latest/django/first-steps-with-django.html</a></li>
   <li><a href="http://docs.celeryproject.org/en/latest/userguide/periodic-tasks.html">http://docs.celeryproject.org/en/latest/userguide/periodic-tasks.html</a></li>
+  <li><a href="http://supervisord.org">http://supervisord.org</a></li>
 </ul>
 
  </div>

@@ -5,8 +5,8 @@
     <description>DjangoPy is not just another Django website. We provide great, quality tutorials and support for the development of Django community.</description>
     <link>https://djangopy.org/</link>
     <atom:link href="https://djangopy.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 17 Feb 2018 19:32:11 +0530</pubDate>
-    <lastBuildDate>Sat, 17 Feb 2018 19:32:11 +0530</lastBuildDate>
+    <pubDate>Sat, 17 Feb 2018 22:53:55 +0530</pubDate>
+    <lastBuildDate>Sat, 17 Feb 2018 22:53:55 +0530</lastBuildDate>
     <generator>Jekyll v3.7.2</generator>
     
       <item>
@@ -355,11 +355,25 @@ Run the celery beat process in new terminal with &lt;strong&gt;–scheduler&lt;/
 
 &lt;hr /&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;running-on-production&quot;&gt;Running on Production&lt;/h2&gt;
+
+&lt;p&gt;Now that celery is perfectly running locally, last thing we need to take care of the production. A question arises here that how we can run these process terminals together for all the time in our Production server, becuase we need to run both the process(beat and worker) to keep the celery working.&lt;/p&gt;
+
+&lt;p&gt;So here Supervisor comes in handy that helps to run both of the instances seperately.&lt;/p&gt;
+
+&lt;p&gt;Supervisor is a client/server system that allows its users to control and keeps it running the process in any unix-like Operating System. So we can use this, for runing celery processes.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://supervisord.org/&quot;&gt;Here&lt;/a&gt; is the documentation for the Supervisor.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://docs.celeryproject.org/en/latest/getting-started/first-steps-with-celery.html&quot;&gt;http://docs.celeryproject.org/en/latest/getting-started/first-steps-with-celery.html&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://docs.celeryproject.org/en/latest/django/first-steps-with-django.html&quot;&gt;http://docs.celeryproject.org/en/latest/django/first-steps-with-django.html&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://docs.celeryproject.org/en/latest/userguide/periodic-tasks.html&quot;&gt;http://docs.celeryproject.org/en/latest/userguide/periodic-tasks.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://supervisord.org&quot;&gt;http://supervisord.org&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
