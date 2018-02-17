@@ -50,8 +50,26 @@ body {
   padding: 1.5rem 0;
 }
 
+.socialIcons {
+  list-style: none;
+  padding-left: 0;
+  width: 60%;
+}
 
-
+.Icon {
+  display: block;
+  float: left;
+  margin: 0 !important;
+  padding: 0 18px !important;
+  width: 12.5%;
+  height: 22px;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
 
 .socialAccountList {
   list-style: none;
