@@ -3,6 +3,10 @@
   height: 300px;
 }
 
+#search{
+  padding-right: 50px;
+  
+}
 a{
   /* These are technically the same, but use both */
   overflow-wrap: break-word;
