@@ -43,11 +43,6 @@ $(document).ready(function () {
         
     })
 
-
-
-
-
-    
     var feedArray = [];
     $("#search_button").click(function(){
         $("#search").val("");
