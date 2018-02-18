@@ -52,7 +52,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "GET",
-            url: "feed.xml",
+            url: "/feed.xml",
             dataType: "xml",
             success: function(returnedXMLResponse) {
                 $($(returnedXMLResponse).find('item')).each(function(index, content){
