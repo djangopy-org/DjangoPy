@@ -39,21 +39,31 @@
 	<meta properry="article:author" content="https://www.facebook.com/djangopy.org">
 	<meta property="article:modified_time" content="2018-02-16 20:34:07 +0530">
 	
-	<meta property="article:tag" content="history"/>
+	<meta property="article:tag" content="handle-asynchronous-tasks-with-celery-and-django"/>
+	
+	<meta property="article:tag" content="celery"/>
 	
 	<meta property="article:tag" content="django"/>
 	
-	<meta property="article:tag" content="history-of-django"/>
+	<meta property="article:tag" content="redis"/>
 	
-	<meta property="article:tag" content="top-ten-site-made-in-django"/>
+	<meta property="article:tag" content="djangopy"/>
 	
-	<meta property="article:tag" content="what-is-django"/>
+	<meta property="article:tag" content="scheduling"/>
 	
-	<meta property="article:tag" content="why-django"/>
+	<meta property="article:tag" content="django-celery"/>
 	
-	<meta property="article:tag" content="introduction-to-django"/>
+	<meta property="article:tag" content="asynchronous"/>
 	
-	<meta property="article:tag" content="learn-django"/>
+	<meta property="article:tag" content="jai-singhal"/>
+	
+	<meta property="article:tag" content="how-to"/>
+	
+	<meta property="article:tag" content="periodic-tasks"/>
+	
+	<meta property="article:tag" content="supervisord"/>
+	
+	<meta property="article:tag" content="supervisor"/>
 	
 
 	<meta property="revisit-after" content="2 days" />
@@ -113,10 +123,12 @@ ga('send', 'pageview');
         <div class="close-btn"><i class="fa fa-2x fa-times"></i></div>
         <div class="row d-flex justify-content-center">
           <div class="col-md-8">
-            <form action="#">
+            <form action="#" id = "search_form">
               <div class="form-group">
                 <input type="search" name="search" id="search" placeholder="What are you looking for?">
                 <button type="submit" class="submit"><i class="fa fa-search"></i></button>
+              </div>
+              <div id = "search_results">
               </div>
             </form>
           </div>
@@ -142,7 +154,7 @@ ga('send', 'pageview');
           <li class="nav-item"><a href="/contact" class="nav-link ">Contact</a>
           </li>
         </ul>
-        <div class="navbar-text"><a href="#" class="search-btn"><i class="fa fa-search"></i></a></div>
+        <div class="navbar-text"><a href="#" class="search-btn" id = "search_button"><i class="fa fa-search"></i></a></div>
       </div>
     </div>
   </nav>

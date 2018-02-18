@@ -5,8 +5,8 @@
     <description>DjangoPy is not just another Django website. We provide great, quality tutorials and support for the development of Django community.</description>
     <link>https://djangopy.org/</link>
     <atom:link href="https://djangopy.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 17 Feb 2018 23:41:56 +0530</pubDate>
-    <lastBuildDate>Sat, 17 Feb 2018 23:41:56 +0530</lastBuildDate>
+    <pubDate>Sun, 18 Feb 2018 15:52:19 +0530</pubDate>
+    <lastBuildDate>Sun, 18 Feb 2018 15:52:19 +0530</lastBuildDate>
     <generator>Jekyll v3.7.2</generator>
     
       <item>
@@ -381,21 +381,31 @@ Run the celery beat process in new terminal with &lt;strong&gt;–scheduler&lt;/
         <link>https://djangopy.org/how-to/handle-asynchronous-tasks-with-celery-and-django</link>
         <guid isPermaLink="true">https://djangopy.org/how-to/handle-asynchronous-tasks-with-celery-and-django</guid>
         
-        <category>history</category>
+        <category>handle-asynchronous-tasks-with-celery-and-django</category>
+        
+        <category>celery</category>
         
         <category>django</category>
         
-        <category>history-of-django</category>
+        <category>redis</category>
         
-        <category>top-ten-site-made-in-django</category>
+        <category>djangopy</category>
         
-        <category>what-is-django</category>
+        <category>scheduling</category>
         
-        <category>why-django</category>
+        <category>django-celery</category>
         
-        <category>introduction-to-django</category>
+        <category>asynchronous</category>
         
-        <category>learn-django</category>
+        <category>jai-singhal</category>
+        
+        <category>how-to</category>
+        
+        <category>periodic-tasks</category>
+        
+        <category>supervisord</category>
+        
+        <category>supervisor</category>
         
         
         <category>how-to</category>

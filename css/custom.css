@@ -1,3 +1,8 @@
+#search_results{
+  overflow-y: auto;
+  height: 300px;
+}
+
 a{
   /* These are technically the same, but use both */
   overflow-wrap: break-word;
