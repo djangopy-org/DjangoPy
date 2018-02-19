@@ -1,7 +1,5 @@
 
-
 $(document).ready(function(){
-
     var disqus_shortname = 'django-py'; 
     //   var disqus_developer = 1; // Comment out when the site is live
     var disqus_identifier = "{{ page.permalink }}";
