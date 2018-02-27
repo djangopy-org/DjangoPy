@@ -109,7 +109,7 @@
                 <input type="search" name="search" id="search" placeholder="What are you looking for?" autocomplete="off">
                 <button type="submit" class="submit"><i class="fa fa-search"></i></button>
               </div>
-              <div id = "search_results" style="font-size: 16.5px;">
+              <div id = "search_results">
               </div>
             </form>
           </div>
@@ -206,7 +206,7 @@
 
 <p>You have to install a package of MailChimp. You can download from PyPI package mailchimp2.0.9 OR you can directly install with pip.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pip install mailchimp
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pip <span class="nb">install </span>mailchimp
  </code></pre></figure>
 
 <p>After installing the package, let’s actually set up the MailChimp Integration and sending a confirmation mail of subscription. Like discussed above, we used Threading to connect to MailChimp API because connecting with other API may take 2-3 second to connect. Using threads allows a program to run multiple operations concurrently in the same process space.</p>

@@ -5,9 +5,9 @@
     <description>DjangoPy is not just another Django website. We provide great, quality tutorials and support for the development of Django community.</description>
     <link>https://djangopy.org/</link>
     <atom:link href="https://djangopy.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 20 Feb 2018 14:20:45 +0530</pubDate>
-    <lastBuildDate>Tue, 20 Feb 2018 14:20:45 +0530</lastBuildDate>
-    <generator>Jekyll v3.7.2</generator>
+    <pubDate>Tue, 27 Feb 2018 18:41:41 +0530</pubDate>
+    <lastBuildDate>Tue, 27 Feb 2018 18:41:41 +0530</lastBuildDate>
+    <generator>Jekyll v3.7.3</generator>
     
       <item>
         <title>Handle Asynchronous Tasks using celery and Django</title>
@@ -28,7 +28,7 @@
 
 &lt;h5 id=&quot;install-celery&quot;&gt;Install Celery&lt;/h5&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip install celery&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;celery&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h5 id=&quot;install-redis&quot;&gt;Install Redis&lt;/h5&gt;
 
@@ -57,7 +57,7 @@
 
 &lt;p&gt;Also install python package of the redis&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip install redis&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;redis&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;hr /&gt;
 
@@ -314,7 +314,7 @@ Configuration -&amp;gt;
 
 &lt;h6 id=&quot;1-install-django-celery-beat&quot;&gt;1. Install django-celery-beat&lt;/h6&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip install django-celery-beat&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;django-celery-beat&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h6 id=&quot;2-add-into-installed-apps&quot;&gt;2. Add into Installed apps&lt;/h6&gt;
 &lt;p&gt;Add the django_celery_beat module to INSTALLED_APPS in your Django project’ settings.py:&lt;/p&gt;
@@ -889,7 +889,7 @@ body {
 
 &lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;pip3 install django-mptt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;pip3 &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;django-mptt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;And add &lt;strong&gt;mptt&lt;/strong&gt; in &lt;strong&gt;INSTALLED_APPS&lt;/strong&gt; in &lt;strong&gt;settings.py&lt;/strong&gt;&lt;/p&gt;
 
@@ -1711,7 +1711,7 @@ function closePopup(win, newID, newRepr, id) {
 
 &lt;p&gt;You have to install a package of MailChimp. You can download from PyPI package mailchimp2.0.9 OR you can directly install with pip.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pip install mailchimp
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;mailchimp
  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;After installing the package, let’s actually set up the MailChimp Integration and sending a confirmation mail of subscription. Like discussed above, we used Threading to connect to MailChimp API because connecting with other API may take 2-3 second to connect. Using threads allows a program to run multiple operations concurrently in the same process space.&lt;/p&gt;
@@ -2175,7 +2175,7 @@ Virtualenv creates an isolated Python Environment by creating a folder which con
 
 &lt;p&gt;First Install the Virtualenv on your system via pip:-&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip install virtualenv&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;virtualenv&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;You can verify your virtualenv version by-&lt;/p&gt;
 
@@ -2211,11 +2211,11 @@ Virtualenv creates an isolated Python Environment by creating a folder which con
 &lt;p&gt;Installing Django
 Now that you have successfully set up your virtualenv, now you need to install the Django package.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip install django&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;django&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;You can download Django of the specific version by specifying the version explicitly. But it is recommended to use the latest version of Django.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip install &lt;span class=&quot;nv&quot;&gt;django&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;version&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;django&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;version&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Check your installed Django version before moving further. If Django is installed, you should see the version of the django you have installed. If it is not installed, it will give an error telling “No module named django”&lt;/p&gt;
 
