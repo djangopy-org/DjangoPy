@@ -11,14 +11,17 @@
   background-color: #f8f8f8;
   border: none !important;
   color:black;
+  display: none;
+
 }
 .btn-clipboard:hover {
     color: #fff;
     background-color: #027de7;
-    -webkit-transition:  2s; /* Safari */
+    -webkit-transition:  1s; /* Safari */
     -webkit-transition-timing-function: linear; /* Safari */
-    transition: width 2s;
+    transition: width 1s;
     transition-timing-function: linear;
+    z-index : 999;
 }
 .btn-clipboard:focus {
     outline: none;
