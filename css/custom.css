@@ -27,3 +27,38 @@
     border:none;
     box-shadow: none;
 }
+.section-nav {
+  background-color: #FFF;
+  margin: 5px 0;
+  padding: 10px 30px;
+  border: 1px solid #E8E8E8;
+  border-radius: 3px;
+}
+
+// Adding 'Contents' headline to the TOC
+#markdown-toc::before {
+  content: "Contents";
+  font-weight: bold;
+}
+
+// Using numbers instead of bullets for listing
+#markdown-toc ul {
+  list-style: decimal;
+  
+}
+
+#markdown-toc {
+  border: 1px solid #aaa;
+  padding: 1.5em;
+  list-style: decimal;
+  display: inline-block;
+}
+
+#markdown-toc  ul li {
+  margin-left: 9px;
+  
+}
+
+.post-content ul{
+  margin-left:22px;
+}

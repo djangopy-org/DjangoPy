@@ -25,4 +25,6 @@ $(document).ready(function(){
         $(".btn-clipboard").text("Copy");
     }, 1000);
   });
+
+ 
 });
