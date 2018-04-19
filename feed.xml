@@ -5,9 +5,51 @@
     <description>DjangoPy is not just another Django website. We provide great, quality tutorials and support for the development of Django community.</description>
     <link>https://djangopy.org/</link>
     <atom:link href="https://djangopy.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 13 Mar 2018 12:37:35 +0530</pubDate>
-    <lastBuildDate>Tue, 13 Mar 2018 12:37:35 +0530</lastBuildDate>
+    <pubDate>Thu, 19 Apr 2018 18:29:59 +0530</pubDate>
+    <lastBuildDate>Thu, 19 Apr 2018 18:29:59 +0530</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
+    
+      <item>
+        <title>Dynamic Searching with Django</title>
+        <description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+</description>
+        <pubDate>Thu, 15 Mar 2018 20:34:07 +0530</pubDate>
+        <link>https://djangopy.org/learn/dynamic-searching-in-django</link>
+        <guid isPermaLink="true">https://djangopy.org/learn/dynamic-searching-in-django</guid>
+        
+        <category>learn</category>
+        
+        <category>ajax-guide</category>
+        
+        <category>ajaxify-django-forms</category>
+        
+        <category>ajax-django</category>
+        
+        <category>implement-ajax-django</category>
+        
+        <category>ajax</category>
+        
+        <category>django</category>
+        
+        <category>step-up-guide-to-implement-ajax-in-django</category>
+        
+        <category>form-submission-without-refresh</category>
+        
+        <category>work-with-ajax-django</category>
+        
+        <category>get-request</category>
+        
+        <category>post-request</category>
+        
+        <category>asynchronous-calls</category>
+        
+        <category>jai-singhal</category>
+        
+        
+        <category>learn</category>
+        
+      </item>
     
       <item>
         <title>Handle Asynchronous Tasks using celery and Django</title>
