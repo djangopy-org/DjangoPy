@@ -1,0 +1,1 @@
+Sitemap: https://djangopy.org/sitemap.xml
