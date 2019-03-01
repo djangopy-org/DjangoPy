@@ -8,7 +8,7 @@ span {
 
 .category a,
 strong {
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .category a,
@@ -422,7 +422,7 @@ section.latest-posts header {
 
 .post .category a {
     color: #999;
-    font-weight: 700;
+    font-weight: 400;
     text-transform: uppercase
 }
 
