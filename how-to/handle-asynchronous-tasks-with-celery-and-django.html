@@ -97,7 +97,24 @@
 	<script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
 	<script src="/js/post.js"></script>
 
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+	<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+	<script>
+	window.addEventListener("load", function(){
+	window.cookieconsent.initialise({
+	  "palette": {
+		"popup": {
+		  "background": "#241f1f"
+		},
+		"button": {
+		  "background": "#ededed"
+		}
+	  },
+	  "theme": "classic"
+	})});
+	</script>
 
 
 	<script type="text/javascript">
@@ -213,9 +230,7 @@
 <span class="nv">$ </span>make</code></pre></figure>
 
 <h6 id="windows-users">Windows users</h6>
-<p>For windows user, you can get executable file of redis from <a href="https://github.com/rgl/redis/downloads">here</a></p>
-
-<p><br /></p>
+<p>For windows user, you can get executable file of redis from <strong><a href="https://github.com/rgl/redis/downloads">here</a></strong></p>
 
 <p>After installing, try if it is correctly installed or not.</p>
 

@@ -5,8 +5,8 @@
     <description>DjangoPy is not just another Django website. We provide great, quality tutorials and support for the development of Django community.</description>
     <link>https://djangopy.org/</link>
     <atom:link href="https://djangopy.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 01 Mar 2019 16:30:00 +0530</pubDate>
-    <lastBuildDate>Fri, 01 Mar 2019 16:30:00 +0530</lastBuildDate>
+    <pubDate>Fri, 01 Mar 2019 16:59:28 +0530</pubDate>
+    <lastBuildDate>Fri, 01 Mar 2019 16:59:28 +0530</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
     
       <item>
@@ -548,9 +548,7 @@
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;make&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h6 id=&quot;windows-users&quot;&gt;Windows users&lt;/h6&gt;
-&lt;p&gt;For windows user, you can get executable file of redis from &lt;a href=&quot;https://github.com/rgl/redis/downloads&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;For windows user, you can get executable file of redis from &lt;strong&gt;&lt;a href=&quot;https://github.com/rgl/redis/downloads&quot;&gt;here&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;After installing, try if it is correctly installed or not.&lt;/p&gt;
 
