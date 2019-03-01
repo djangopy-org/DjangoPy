@@ -5,8 +5,8 @@
     <description>DjangoPy is not just another Django website. We provide great, quality tutorials and support for the development of Django community.</description>
     <link>https://djangopy.org/</link>
     <atom:link href="https://djangopy.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 01 Mar 2019 02:06:24 +0530</pubDate>
-    <lastBuildDate>Fri, 01 Mar 2019 02:06:24 +0530</lastBuildDate>
+    <pubDate>Fri, 01 Mar 2019 16:30:00 +0530</pubDate>
+    <lastBuildDate>Fri, 01 Mar 2019 16:30:00 +0530</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
     
       <item>
@@ -461,7 +461,7 @@
 
 &lt;h1 id=&quot;final-words&quot;&gt;Final Words&lt;/h1&gt;
 
-&lt;p&gt;AJAX is the best way to do the asynchronous task in small scale. However, if you want to asynchronous tasks at a large scale, you can choose any frontend javascript framework/library such as &lt;strong&gt;React&lt;/strong&gt;, &lt;strong&gt;Angular&lt;/strong&gt;, &lt;strong&gt;Vue&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;AJAX is the best way to do asynchronous tasks on a small scale. However, if you want to perform asynchronous tasks at a very large scale, you can opt any frontend javascript framework/library, the best available in the market are &lt;strong&gt;React&lt;/strong&gt;, &lt;strong&gt;Angular&lt;/strong&gt;, &lt;strong&gt;Vue&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;If you have any problem in the steps discussed above, you can look out our &lt;strong&gt;GitHub&lt;/strong&gt; &lt;strong&gt;repository&lt;/strong&gt; &lt;a href=&quot;https://github.com/djangopy-org/ajax_guide&quot;&gt;https://github.com/djangopy-org/ajax_guide&lt;/a&gt;&lt;/p&gt;
 
