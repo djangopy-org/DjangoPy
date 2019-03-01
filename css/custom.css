@@ -359,7 +359,7 @@ body {
     color: #999;
     padding-left: .25rem;
     font-size: .94rem;
-    font-weight: 450
+    /* font-weight: 450 */
 }
 
 .post-line {
