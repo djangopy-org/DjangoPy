@@ -5,8 +5,8 @@
     <description>DjangoPy is not just another Django website. We provide great, quality tutorials and support for the development of Django community.</description>
     <link>https://djangopy.org/</link>
     <atom:link href="https://djangopy.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 01 Mar 2019 17:19:53 +0530</pubDate>
-    <lastBuildDate>Fri, 01 Mar 2019 17:19:53 +0530</lastBuildDate>
+    <pubDate>Fri, 01 Mar 2019 17:25:40 +0530</pubDate>
+    <lastBuildDate>Fri, 01 Mar 2019 17:25:40 +0530</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
     
       <item>
@@ -108,7 +108,7 @@
 
 &lt;p&gt;I want to make this example which is easy to understand for the newbie, however, it is also helpful for the intermediates. So let’s get started.&lt;/p&gt;
 
-&lt;h3 id=&quot;modelspy&quot;&gt;&lt;strong&gt;models.py&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;modelspy&quot;&gt;models.py&lt;/h3&gt;
 
 &lt;p&gt;Let’s create a basic Contact Model&lt;/p&gt;
 
@@ -125,7 +125,7 @@
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;urlspy&quot;&gt;&lt;strong&gt;urls.py&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;urlspy&quot;&gt;urls.py&lt;/h3&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.contrib&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;admin&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.urls&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;
@@ -141,7 +141,7 @@
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;formspy&quot;&gt;&lt;strong&gt;forms.py&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;formspy&quot;&gt;forms.py&lt;/h3&gt;
 
 &lt;p&gt;In &lt;strong&gt;ContactForm&lt;/strong&gt; class, I have done some little changes in the basic form rendering. In &lt;strong&gt;__init__&lt;/strong&gt; method, I have added &lt;strong&gt;form-control&lt;/strong&gt; class to every form input element, to make it Bootstrap4 powered.&lt;/p&gt;
 
@@ -164,7 +164,7 @@
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;viewspy&quot;&gt;&lt;strong&gt;Views.py&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;viewspy&quot;&gt;Views.py&lt;/h3&gt;
 
 &lt;p&gt;Now, this is the section where we need to put some attention to understand the AJAX in a better way. I have created two Function based views(FBV) which deal with &lt;strong&gt;GET&lt;/strong&gt; and &lt;strong&gt;POST&lt;/strong&gt; respectively.&lt;/p&gt;
 
@@ -188,7 +188,7 @@
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;contacthtml&quot;&gt;&lt;strong&gt;contact.html&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;contacthtml&quot;&gt;contact.html&lt;/h3&gt;
 
 &lt;p&gt;Moving to frontend section, let’s first extends the &lt;strong&gt;base.html&lt;/strong&gt; which is discussed above.&lt;/p&gt;
 
@@ -250,7 +250,7 @@
 &lt;h2 id=&quot;making-class-based-views&quot;&gt;Making Class based views&lt;/h2&gt;
 
 &lt;p&gt;To convert the above example from Function based views to class based views(CBV), we just need to transform our views.py only, and also make a route for the view in urls.py&lt;/p&gt;
-&lt;h3 id=&quot;urlspy-1&quot;&gt;&lt;strong&gt;urls.py&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;urlspy-1&quot;&gt;urls.py&lt;/h3&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;app_1&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;views&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;app1&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;urlpatterns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
@@ -260,7 +260,7 @@
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;viewspy-1&quot;&gt;&lt;strong&gt;views.py&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;viewspy-1&quot;&gt;views.py&lt;/h3&gt;
 &lt;p&gt;In the &lt;strong&gt;FBV&lt;/strong&gt;, we have used the &lt;strong&gt;2&lt;/strong&gt; function views, that can be wrap in the single class containing two methods namely &lt;strong&gt;GET&lt;/strong&gt; and &lt;strong&gt;POST&lt;/strong&gt; with a single url route.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.shortcuts&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt;
@@ -326,7 +326,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;urlspy-2&quot;&gt;&lt;strong&gt;urls.py&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;urlspy-2&quot;&gt;urls.py&lt;/h3&gt;
 &lt;p&gt;Create the url route for the displaying the user and an &lt;strong&gt;AJAX&lt;/strong&gt; request url&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;django.urls&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;
@@ -340,7 +340,7 @@
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;viewspy-2&quot;&gt;&lt;strong&gt;views.py&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;viewspy-2&quot;&gt;views.py&lt;/h3&gt;
 
 &lt;p&gt;The views are pretty similar with above example views, with the slight change i.e., the method &lt;strong&gt;GET&lt;/strong&gt; in replace of &lt;strong&gt;POST&lt;/strong&gt; and way of wrapping the object into the dictionary and sending the &lt;strong&gt;response&lt;/strong&gt;&lt;/p&gt;
 
@@ -372,7 +372,7 @@
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;userhtml&quot;&gt;&lt;strong&gt;user.html&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;userhtml&quot;&gt;user.html&lt;/h3&gt;
 
 &lt;p&gt;Moving to the frontend part, after selecting username option from the &lt;strong&gt;select box&lt;/strong&gt;, the &lt;strong&gt;AJAX&lt;/strong&gt; call will be made to our Django server with the username which is selected, and the Django server will respond with information for the respective username in its response, which is then rendered in the table body.&lt;/p&gt;
 

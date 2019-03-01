@@ -297,7 +297,7 @@
 
 <p>I want to make this example which is easy to understand for the newbie, however, it is also helpful for the intermediates. So let’s get started.</p>
 
-<h3 id="modelspy"><strong>models.py</strong></h3>
+<h3 id="modelspy">models.py</h3>
 
 <p>Let’s create a basic Contact Model</p>
 
@@ -314,7 +314,7 @@
 
 <hr />
 
-<h3 id="urlspy"><strong>urls.py</strong></h3>
+<h3 id="urlspy">urls.py</h3>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
 <span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
@@ -330,7 +330,7 @@
 
 <hr />
 
-<h3 id="formspy"><strong>forms.py</strong></h3>
+<h3 id="formspy">forms.py</h3>
 
 <p>In <strong>ContactForm</strong> class, I have done some little changes in the basic form rendering. In <strong>__init__</strong> method, I have added <strong>form-control</strong> class to every form input element, to make it Bootstrap4 powered.</p>
 
@@ -353,7 +353,7 @@
 
 <hr />
 
-<h3 id="viewspy"><strong>Views.py</strong></h3>
+<h3 id="viewspy">Views.py</h3>
 
 <p>Now, this is the section where we need to put some attention to understand the AJAX in a better way. I have created two Function based views(FBV) which deal with <strong>GET</strong> and <strong>POST</strong> respectively.</p>
 
@@ -377,7 +377,7 @@
 
 <hr />
 
-<h3 id="contacthtml"><strong>contact.html</strong></h3>
+<h3 id="contacthtml">contact.html</h3>
 
 <p>Moving to frontend section, let’s first extends the <strong>base.html</strong> which is discussed above.</p>
 
@@ -439,7 +439,7 @@
 <h2 id="making-class-based-views">Making Class based views</h2>
 
 <p>To convert the above example from Function based views to class based views(CBV), we just need to transform our views.py only, and also make a route for the view in urls.py</p>
-<h3 id="urlspy-1"><strong>urls.py</strong></h3>
+<h3 id="urlspy-1">urls.py</h3>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">app_1</span> <span class="kn">import</span> <span class="n">views</span> <span class="k">as</span> <span class="n">app1</span>
 <span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
@@ -449,7 +449,7 @@
 
 <hr />
 
-<h3 id="viewspy-1"><strong>views.py</strong></h3>
+<h3 id="viewspy-1">views.py</h3>
 <p>In the <strong>FBV</strong>, we have used the <strong>2</strong> function views, that can be wrap in the single class containing two methods namely <strong>GET</strong> and <strong>POST</strong> with a single url route.</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
@@ -515,7 +515,7 @@
 </code></pre></div></div>
 <hr />
 
-<h3 id="urlspy-2"><strong>urls.py</strong></h3>
+<h3 id="urlspy-2">urls.py</h3>
 <p>Create the url route for the displaying the user and an <strong>AJAX</strong> request url</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
@@ -529,7 +529,7 @@
 
 <hr />
 
-<h3 id="viewspy-2"><strong>views.py</strong></h3>
+<h3 id="viewspy-2">views.py</h3>
 
 <p>The views are pretty similar with above example views, with the slight change i.e., the method <strong>GET</strong> in replace of <strong>POST</strong> and way of wrapping the object into the dictionary and sending the <strong>response</strong></p>
 
@@ -561,7 +561,7 @@
 
 <hr />
 
-<h3 id="userhtml"><strong>user.html</strong></h3>
+<h3 id="userhtml">user.html</h3>
 
 <p>Moving to the frontend part, after selecting username option from the <strong>select box</strong>, the <strong>AJAX</strong> call will be made to our Django server with the username which is selected, and the Django server will respond with information for the respective username in its response, which is then rendered in the table body.</p>
 
