@@ -7,18 +7,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- COMMON TAGS -->
-	<title>Getting started with Django | DjangoPy</title>
+	<title>Dynamically filter queryset with AJAX and DRF | DjangoPy</title>
 	<!-- Search Engine -->
-	<meta property="description" content="After too much motivation, now it's time to get started with Django. To develop your Django-powered site, you first need to install Python on your system. It is highly recommended to install the latest version of Python.">
+	<meta property="description" content="In this post we will learn, how to submit the forms and perform asynchronous tasks with the help of AJAX">
 	<meta property="image" content="https://djangopy.org/static/images/footer_logo.png">
 	<!-- Schema.org for Google -->
 
 	<!-- Open Graph general (Facebook, Pinterest & Google+) -->
-	<meta property="og:title" content="Getting started with Django | DjangoPy">
-	<meta property="og:description" content="After too much motivation, now it's time to get started with Django. To develop your Django-powered site, you first need to install Python on your system. It is highly recommended to install the latest version of Python.">
-	<meta property="og:image" content="https://djangopy.org/img/introduction-to-django/code-pc-sublime-img.jpg">
+	<meta property="og:title" content="Dynamically filter queryset with AJAX and DRF | DjangoPy">
+	<meta property="og:description" content="In this post we will learn, how to submit the forms and perform asynchronous tasks with the help of AJAX">
+	<meta property="og:image" content="https://djangopy.org/img/step-up-guide-to-implement-ajax-in-django/cover.jpg">
 
-	<meta property="og:url" content="https://djangopy.org/learn/getting-started-with-django/">
+	<meta property="og:url" content="https://djangopy.org/learn/dynamically-filter-queryset-with-ajax-and-drf">
 	<meta property="og:site_name" content="DjangoPy">
 	<meta property="og:locale" content="en_US">
 	<meta property="fb:admins" content="https://www.facebook.com/djangopy.org">
@@ -26,34 +26,34 @@
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary">
-	<meta property="twitter:title" content="Getting started with Django | DjangoPy">
-	<meta property="twitter:description" content="After too much motivation, now it's time to get started with Django. To develop your Django-powered site, you first need to install Python on your system. It is highly recommended to install the latest version of Python.">
+	<meta property="twitter:title" content="Dynamically filter queryset with AJAX and DRF | DjangoPy">
+	<meta property="twitter:description" content="In this post we will learn, how to submit the forms and perform asynchronous tasks with the help of AJAX">
 	<meta property="twitter:site" content="@DjangoPy_Admin">
 	<meta property="twitter:creator" content="@DjangoPy_Admin">
-	<meta property="twitter:image:src" content="https://djangopy.org/img/introduction-to-django/code-pc-sublime-img.jpg">
+	<meta property="twitter:image:src" content="https://djangopy.org/img/step-up-guide-to-implement-ajax-in-django/cover.jpg">
 	<!-- Twitter - Article -->
 
 	<!-- Open Graph - Article -->
 	<meta property="article:section" content="learn">
-	<meta property="article:published_time" content="2017-05-20 20:34:07 +0530">
+	<meta property="article:published_time" content="2019-03-02 20:34:07 +0530">
 	<meta properry="article:author" content="https://www.facebook.com/djangopy.org">
-	<meta property="article:modified_time" content="2017-05-20 20:34:07 +0530">
+	<meta property="article:modified_time" content="2019-03-02 20:34:07 +0530">
 	
-	<meta property="article:tag" content="getting-started-with-django"/>
+	<meta property="article:tag" content="ajax"/>
 	
-	<meta property="article:tag" content="my-first-django-app"/>
+	<meta property="article:tag" content="dynamically-filter-queryset-with-ajax-and-drf"/>
 	
-	<meta property="article:tag" content="my-first-django-site"/>
+	<meta property="article:tag" content="django"/>
 	
-	<meta property="article:tag" content="virtualenv"/>
+	<meta property="article:tag" content="django-rest-framework"/>
 	
 
 	<meta property="revisit-after" content="2 days" />
 	<meta property="distribution" content="web" />
 	<meta property="article:publisher" content="https://www.facebook.com/djangopy.org/"/>
-	<meta name="description" content="After too much motivation, now it's time to get started with Django. To develop your Django-powered site, you first need to install Python on your system. It is highly recommended to install the latest version of Python."/>
+	<meta name="description" content="In this post we will learn, how to submit the forms and perform asynchronous tasks with the help of AJAX"/>
 
-	<link rel="canonical" href="https://djangopy.org/learn/getting-started-with-django/">
+	<link rel="canonical" href="https://djangopy.org/learn/dynamically-filter-queryset-with-ajax-and-drf">
 	<link rel="alternate" type="application/rss+xml" title="DjangoPy" href="https://djangopy.org/feed.xml">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<!-- Font Awesome CSS-->
@@ -168,120 +168,189 @@
                 <img 
     class="img-fluid lazy" 
     alt="" 
-    src="/img/introduction-to-django/code-pc-sublime-img.jpg" 
+    src="/img/step-up-guide-to-implement-ajax-in-django/cover.jpg" 
     title="" 
-    srcset="/assets/resized/480/code-pc-sublime-img.jpg 480w,/assets/resized/800/code-pc-sublime-img.jpg 800w,/img/introduction-to-django/code-pc-sublime-img.jpg 940w"
+    srcset="/assets/resized/480/cover.jpg 480w,/assets/resized/800/cover.jpg 800w,/assets/resized/1400/cover.jpg 1400w,/img/step-up-guide-to-implement-ajax-in-django/cover.jpg 1540w"
 />
                 <br><br>
-                <h1 class="post-title" style="margin-top:15px;">Getting started with Django</h1>
-                <h6 class="post-spans">Posted: 20 May 2017 | Post By: Jai Singhal | <span
-                        id="ga-page-view" ga-page-url=/learn/getting-started-with-django/></span> <i class="fa fa-eye"></i> | <i class="fa fa-clock"></i>
-                    4 min read | <a style="text-decoration: none;" href="/learn/getting-started-with-django/.html#disqus_thread"
-                        data-disqus-identifier="/learn/getting-started-with-django/"><i class="fa fa-comment"></i></a> </h6>
+                <h1 class="post-title" style="margin-top:15px;">Dynamically filter queryset with AJAX and DRF</h1>
+                <h6 class="post-spans">Posted: 02 March 2019 | Post By: Jai Singhal | <span
+                        id="ga-page-view" ga-page-url=/learn/dynamically-filter-queryset-with-ajax-and-drf></span> <i class="fa fa-eye"></i> | <i class="fa fa-clock"></i>
+                    5 min read | <a style="text-decoration: none;" href="/learn/dynamically-filter-queryset-with-ajax-and-drf.html#disqus_thread"
+                        data-disqus-identifier="/learn/dynamically-filter-queryset-with-ajax-and-drf"><i class="fa fa-comment"></i></a> </h6>
                 <br>
                 <hr /><br>
-                <div class="post-content"> <p>After too much motivation, now it’s time to get started with Django. To develop your Django-powered site, you first need to install Python on your system. It is highly recommended to install the latest version of Python, and for those people who are using Python2, it is recommended to switch to Python3. You can easily download the latest version from here.</p>
+                <div class="post-content"> <h2 id="introduction">Introduction</h2>
 
-<p>If you are not familiar with Python, then you should need to brush up your basic knowledge of Python from here.</p>
+<p>Filtering queryset dynamically is kind something that is very common in use. In this post we will learn how to dynamically filter the queryset depending on the several filter on top of each other. If you do not have hands on AJAX, then you should definately check out this <strong><a href="https:djangopy.org/learn/step-up-guide-to-implement-ajax-in-django">post</a></strong></p>
 
-<p>Now after completely installing python on your system, let’s set up the virtual environment(Why?)</p>
+<p>This post contains lot of javascript, just bear with me, I will explain every aspect of it. As usual the complete project code is available on Github. You can find the link at the end of this post.</p>
 
-<p>A Virtual Environment is a tool to keep the dependencies required by your different projects in separate places, by creating virtual Python environments for them, it keeps your global python site-packages directory clean and manageable.</p>
+<p>The promo GIF of what we will be building in shown below
+<br /></p>
 
-<p>Settings Up Virtualenv
-Virtualenv creates an isolated Python Environment by creating a folder which contains all the Python executables files, and all the necessary Packages that your project would need.</p>
+<p><img src="/img/dynamically-filter-queryset-with-ajax-and-drf/django_filter.gif" alt="Post Promo GIF" /></p>
 
-<p>First Install the Virtualenv on your system via pip:-</p>
+<p><br />
+<br /></p>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>pip <span class="nb">install </span>virtualenv</code></pre></figure>
+<h2 id="initial-setup">Initial Setup</h2>
 
-<p>You can verify your virtualenv version by-</p>
+<p>As always we follow some standard notions, please follow this, for better reults.</p>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>virtualenv <span class="nt">--version</span></code></pre></figure>
+<h4 id="directory-structure">Directory Structure</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├── dynamic_filter
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── static
+│   └── js
+│       └── wine.js
+├── wine
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   ├── models.py
+│   ├── pagination.py
+│   ├── serializers.py
+│   ├── templates
+│   │   ├── base.html
+│   │   └── wine.html
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── loaddata.py
+├── manage.py
+├── db.sqlite3
+└── wine.csv
+</code></pre></div></div>
 
-<p>Now let’s create a Virtualenv. Change the directory you want to start your project</p>
+<h4 id="basehtml">base.html</h4>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span><span class="nb">cd</span> /where/you/want_to/store/your/project
-<span class="nv">$ </span>virtualenv venv</code></pre></figure>
+<figure class="highlight"><pre><code class="language-django" data-lang="django"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=edge"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">head</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"</span><span class="nt">&gt;</span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">style</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">content</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">script</span> <span class="cp">%}</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
 
-<p>Sometimes in Linux system, you need to explicitly mention that you are creating for python3</p>
+<h4 id="installing-drf">Installing DRF</h4>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">virtualenv <span class="nt">-p</span> python3 venv</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>pip <span class="nb">install </span>django_rest_framework</code></pre></figure>
 
-<p>Here, venv is the name of the folder, you have created (you can change to whatever name you like). This will install setuptools, pip, wheel and all other packages and dependencies your project would need.</p>
+<h4 id="setting-static-path">Setting static path</h4>
 
-<p>Now to begin with your created virtualenv(venv), you need to activate it, change the directory to the venv folder</p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">STATIC_URL</span> <span class="o">=</span> <span class="s">'/static/'</span>
+<span class="n">STATICFILES_DIRS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">BASE_DIR</span><span class="p">,</span> <span class="s">"static"</span><span class="p">),</span>
+<span class="p">]</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span><span class="nb">cd </span>venv</code></pre></figure>
+<h4 id="installed-apps">Installed apps</h4>
 
-<p>For Linux/Mac users,</p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="o">...</span>
+    <span class="s">"rest_framework"</span><span class="p">,</span>
+    <span class="s">"wine"</span>
+<span class="p">]</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span><span class="nb">source </span>bin/activate</code></pre></figure>
+<h4 id="drf-setup">DRF Setup</h4>
 
-<p>For Windows users,</p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">REST_FRAMEWORK</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'DEFAULT_RENDERER_CLASSES'</span><span class="p">:</span> <span class="p">(</span>
+        <span class="s">'rest_framework.renderers.JSONRenderer'</span><span class="p">,</span>
+        <span class="s">'rest_framework.renderers.TemplateHTMLRenderer'</span><span class="p">,</span>
+        <span class="s">'rest_framework.renderers.BrowsableAPIRenderer'</span><span class="p">,</span>
+    <span class="p">),</span>
+<span class="p">}</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>.<span class="se">\s</span>cripts<span class="se">\a</span>ctivate</code></pre></figure>
+<hr />
 
-<p>Notice that (venv) should be written to the current directory in terminal/cmd.If you are done with working with your virtualenv, you can deactivate it.</p>
+<p><br /></p>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>deactivate</code></pre></figure>
+<h2 id="feed-the-data">#Feed the data</h2>
+<p>Since we need a lot of data to filter, I have found a dataset on <a href="https://kaggle.com">Kaggle</a>, so we can build a table to store it. You can download the data from <strong><a href="/data/dynamically-filter-queryset-with-ajax-and-drf/wine.rar">here</a></strong> and copy it to the django main directory(where manage.py lives)
+Create an app and also create the table that fits into it.</p>
 
-<p>Installing Django
-Now that you have successfully set up your virtualenv, now you need to install the Django package.</p>
+<p>After you downloaded the data, let’s import to our database</p>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>pip <span class="nb">install </span>django</code></pre></figure>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
 
-<p>You can download Django of the specific version by specifying the version explicitly. But it is recommended to use the latest version of Django.</p>
+<span class="k">class</span> <span class="nc">Wine</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+	<span class="n">country</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+	<span class="n">designation</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">null</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+	<span class="n">description</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="n">null</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+	<span class="n">points</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">null</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+	<span class="n">price</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">null</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+	<span class="n">province</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">null</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+	<span class="n">region</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span> <span class="o">=</span> <span class="mi">150</span><span class="p">,</span> <span class="n">null</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+	<span class="n">taster_name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span> <span class="o">=</span> <span class="mi">120</span><span class="p">,</span> <span class="n">null</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+	<span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">null</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+	<span class="n">variety</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span> <span class="o">=</span> <span class="mi">150</span><span class="p">,</span> <span class="n">null</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+	<span class="n">winery</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span> <span class="o">=</span> <span class="mi">150</span><span class="p">,</span> <span class="n">null</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>pip <span class="nb">install </span><span class="nv">django</span><span class="o">==</span>version</code></pre></figure>
+	<span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+		<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">title</span></code></pre></figure>
 
-<p>Check your installed Django version before moving further. If Django is installed, you should see the version of the django you have installed. If it is not installed, it will give an error telling “No module named django”</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>python manage.py makemigrations</code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>python <span class="nt">-m</span> django <span class="nt">--version</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>python manage.py migrate</code></pre></figure>
 
-<p>Creating your first Django project
-Django Project is a directory where django keep its settings file, Database, and all the Scripts, you will be working upon.</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>python manage.py shell</code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nv">$ </span>django-admin startproject mysite</code></pre></figure>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">wine.models</span> <span class="kn">import</span> <span class="n">Wine</span>
+<span class="kn">import</span> <span class="nn">csv</span>
 
-<p>It will create the mysite directory containing the files/folders as listed below-</p>
+<span class="n">wine_csv</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'wine.csv'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s">"utf-8"</span><span class="p">)</span> 
+<span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">wine_csv</span><span class="p">)</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="bp">None</span><span class="p">)[</span><span class="mi">1</span><span class="p">:]</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>  
+   <span class="n">wine_dict</span> <span class="o">=</span> <span class="p">{}</span>
+   <span class="k">for</span> <span class="n">h</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">headers</span><span class="p">,</span> <span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">:]):</span>
+      <span class="n">wine_dict</span><span class="p">[</span><span class="n">h</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+   <span class="n">wine</span> <span class="o">=</span> <span class="n">Wine</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="o">**</span><span class="n">wine_dict</span><span class="p">)</span>
 
-<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown">mysite/
-    manage.py
-    mysite/
-        __init__.py
-        settings.py
-        urls.py
-        wsgi.py</code></pre></figure>
+<span class="n">wine_csv</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>  </code></pre></figure>
 
-<p>You can change the name outer mysite/ name as you want, many of the developers change it to src, because this is the container of your project, and also it is root directory which all your source code within it. What these .py files actually are, let’s see-</p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">serializers</span>
+<span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Wine</span>
 
-<p>manage.py is a command line utility that lets you interact with your Django project, It contains all the necessary commands you would need like starting the server, creating an app, collect static files which will be discussed later.
-<strong>init</strong>.py is a blank python file that tells Python that this directory should be considered a Python package.
-settings.py is the main configuration of your Django project, that tells you about how the settings work.
-urls.py is the URL declaration for your site, i.e., a Table of Content of your Django-powered site.
-wsgi.py is an entry-point for WSGI-compatible web servers to serve your project.
-The Development server
-Now that you have completely setup your Django project let’s verify that it works. Change your directory to outer mysite folder(or src folder), where your manage.py file is kept. Open up terminal/cmd and write-</p>
+<span class="k">class</span> <span class="nc">WineSerializers</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">ModelSerializer</span><span class="p">):</span>
+	<span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+	    <span class="n">model</span> <span class="o">=</span> <span class="n">Wine</span>
+	    <span class="n">fields</span> <span class="o">=</span> <span class="p">(</span><span class="s">'id'</span><span class="p">,</span> <span class="s">'description'</span><span class="p">,</span> <span class="s">'designation'</span><span class="p">,</span> <span class="s">'country'</span><span class="p">,</span> <span class="s">"taster_name"</span><span class="p">,</span> <span class="s">"title"</span><span class="p">,</span>
+	    		<span class="s">'points'</span><span class="p">,</span> <span class="s">'price'</span><span class="p">,</span> <span class="s">'province'</span><span class="p">,</span> <span class="s">'region'</span><span class="p">,</span> <span class="s">'variety'</span><span class="p">,</span> <span class="s">'winery'</span><span class="p">)</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown">python manage.py runserver</code></pre></figure>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">pagination</span>
 
-<p>You will see this following output on your command line</p>
+<span class="k">class</span> <span class="nc">StandardResultsSetPagination</span><span class="p">(</span><span class="n">pagination</span><span class="o">.</span><span class="n">PageNumberPagination</span><span class="p">):</span>
+    <span class="n">page_size</span> <span class="o">=</span> <span class="mi">7</span>
+    <span class="n">page_size_query_param</span> <span class="o">=</span> <span class="s">'page_size'</span>
+    <span class="n">max_page_size</span> <span class="o">=</span> <span class="mi">100</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown">Performing system checks...
+<h2 id="final-words">Final Words</h2>
 
-System check identified no issues (0 silenced).
+<p>AJAX is the best way to do asynchronous tasks on a small scale. However, if you want to perform asynchronous tasks at a very large scale, you can opt any frontend javascript framework/library, the best available in the market are <strong>React</strong>, <strong>Angular</strong>, <strong>Vue</strong>.</p>
 
-You have 13 unapplied migration(s). Your project may not work properly until you
- apply the migrations for app(s): admin, auth, contenttypes, sessions.
-Run 'python manage.py migrate' to apply them.
-May 09, 2017 - 12:58:48
-Django version 1.11.1, using settings 'mysite.settings'
-Starting development server at http://127.0.0.1:8000/
-Quit the server with CTRL-BREAK.</code></pre></figure>
-
-<p>Open up your browser and browse https://127.0.0.1:8000/ or http://localhost:8000/. You will see this type of output.</p>
-
+<p>If you have any problem in the steps discussed above, you can look out our <strong>GitHub</strong> <strong>repository</strong> 
+<a href="https://github.com/djangopy-org/dynamic_filter">https://github.com/djangopy-org/dynamic_filter</a></p>
  </div>
                 <div class="overlay-dark">
                     <div class="close-btn">
@@ -291,13 +360,13 @@ Quit the server with CTRL-BREAK.</code></pre></figure>
                 <img class="img-overlay">
                 <br><br>
                 <ul class="socialIcons">
-                    <li><a href="https://www.facebook.com/dialog/feed?app_id=184683071273&link=https://djangopy.org/learn/getting-started-with-django/&picture=https://djangopy.orgimg/introduction-to-django/code-pc-sublime-img.jpg&name=Getting started with Django&caption=%20&description=After too much motivation, now it's time to get started with Django. To develop your Django-powered site, you first need to install Python on your system. It is highly recommended to install the latest version of Python.&redirect_uri=http%3A%2F%2Fwww.facebook.com%2F"
+                    <li><a href="https://www.facebook.com/dialog/feed?app_id=184683071273&link=https://djangopy.org/learn/dynamically-filter-queryset-with-ajax-and-drf&picture=https://djangopy.orgimg/step-up-guide-to-implement-ajax-in-django/cover.jpg&name=Dynamically filter queryset with AJAX and DRF&caption=%20&description=In this post we will learn, how to submit the forms and perform asynchronous tasks with the help of AJAX&redirect_uri=http%3A%2F%2Fwww.facebook.com%2F"
                             class="Icon socialAccount--facebook" target="_blank"></a></li>
-                    <li><a href="http://twitter.com/intent/tweet?text=Getting started with Django - DjangoPy https://djangopy.org/learn/getting-started-with-django/"
+                    <li><a href="http://twitter.com/intent/tweet?text=Dynamically filter queryset with AJAX and DRF - DjangoPy https://djangopy.org/learn/dynamically-filter-queryset-with-ajax-and-drf"
                             class="Icon socialAccount--twitter" target="_blank"></a></li>
                     <li><a href=" https://plus.google.com/share?url=https://djangopy.org" class="Icon socialAccount--google"
                             target="_blank"></a></li>
-                    <li><a href="mailto:djangopyz@gmail.com?&subject=DjangoPy | Learn, Code, Implement&body=Getting started with Django%0A https://djangopy.org/learn/getting-started-with-django/"
+                    <li><a href="mailto:djangopyz@gmail.com?&subject=DjangoPy | Learn, Code, Implement&body=Dynamically filter queryset with AJAX and DRF%0A https://djangopy.org/learn/dynamically-filter-queryset-with-ajax-and-drf"
                             target="_self" class="Icon socialAccount--mail" target="_blank"></a></li>
                 </ul>
                 <br>

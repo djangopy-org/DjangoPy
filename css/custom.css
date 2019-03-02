@@ -398,14 +398,15 @@ body {
 .post-content>p {
     color: #3a3a3a !important;
 }
-
+.hljs{
+    overflow-y: scroll;
+    max-height: 280px;
+}
 .clippy {
     position: absolute;
-    right: 20px;
-    width: 55px;
-    height: 26px;
+    right: 32px;
     font-size: 13px;
-    padding: 4px;
+    padding: 3px 6px 3px 6px;
 }
 
 .btn-clipboard {
