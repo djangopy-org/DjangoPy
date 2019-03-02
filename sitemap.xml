@@ -41,10 +41,6 @@
 <lastmod>2019-02-28T20:34:07+05:30</lastmod>
 </url>
 <url>
-<loc>https://djangopy.org/learn/dynamically-filter-queryset-with-ajax-and-drf</loc>
-<lastmod>2019-03-02T20:34:07+05:30</lastmod>
-</url>
-<url>
 <loc>https://djangopy.org/404</loc>
 </url>
 <url>
@@ -67,8 +63,5 @@
 </url>
 <url>
 <loc>https://djangopy.org/blog/page2/</loc>
-</url>
-<url>
-<loc>https://djangopy.org/blog/page3/</loc>
 </url>
 </urlset>
