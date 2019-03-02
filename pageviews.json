@@ -1,6 +1,10 @@
 {
     "rows": [
         [
+            "/learn/step-up-guide-to-implement-ajax-in-django",
+            "180"
+        ],
+        [
             "/how-to/handle-asynchronous-tasks-with-celery-and-django",
             "1714"
         ],
