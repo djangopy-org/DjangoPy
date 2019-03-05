@@ -5,15 +5,15 @@
     <description>DjangoPy is not just another Django website. We provide great, quality tutorials and support for the development of Django community.</description>
     <link>https://djangopy.org/</link>
     <atom:link href="https://djangopy.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 06 Mar 2019 00:58:53 +0530</pubDate>
-    <lastBuildDate>Wed, 06 Mar 2019 00:58:53 +0530</lastBuildDate>
+    <pubDate>Wed, 06 Mar 2019 01:17:21 +0530</pubDate>
+    <lastBuildDate>Wed, 06 Mar 2019 01:17:21 +0530</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
     
       <item>
         <title>Dynamically filter queryset with AJAX and DRF</title>
         <description>&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
-&lt;p&gt;Filtering queryset dynamically is something that is very common in use. In this post, we will learn how to dynamically filter the queryset depending on the several filters on top of each other. If you do not have hands-on AJAX, then you should definitely check out this &lt;strong&gt;&lt;a href=&quot;https:djangopy.org/learn/step-up-guide-to-implement-ajax-in-django&quot;&gt;post&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Filtering queryset dynamically is something that is very common in use. In this post, we will learn how to dynamically filter the queryset depending on the several filters on top of each other. If you do not have hands-on AJAX, then you should definitely check out this &lt;strong&gt;&lt;a href=&quot;https://djangopy.org/learn/step-up-guide-to-implement-ajax-in-django&quot;&gt;post&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;This post contains a lot of javascript, don’t panic just bear with me, I will explain every aspect of it. As usual, the complete project code is available on Github. You can find the link at the end of this post.&lt;/p&gt;
 
