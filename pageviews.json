@@ -1,20 +1,16 @@
 {
     "rows": [
         [
-            "/learn/dynamically-filter-queryset-with-ajax-and-drf",
-            "120"
-        ],
-        [
-            "/learn/step-up-guide-to-implement-ajax-in-django",
-            "320"
+            "/how-to/first-post/",
+            "68"
         ],
         [
             "/how-to/handle-asynchronous-tasks-with-celery-and-django",
-            "1726"
+            "2021"
         ],
         [
             "/how-to/how-to-implement-categories-in-django/",
-            "8966"
+            "10008"
         ],
         [
             "/how-to/making-django-form-google-recaptcha-powered/",
@@ -22,31 +18,47 @@
         ],
         [
             "/how-to/pagination-with-django/",
-            "1993"
+            "2210"
         ],
         [
             "/how-to/reverse-engineering-of-the-django-admin-foreign-keys-addedit-button/",
-            "2472"
+            "2721"
+        ],
+        [
+            "/how-to/sample-post/",
+            "108"
+        ],
+        [
+            "/learn/dynamically-filter-queryset-with-ajax-and-drf",
+            "351"
         ],
         [
             "/learn/getting-started-with-django/",
-            "420"
+            "429"
         ],
         [
             "/learn/introduction-to-django/",
-            "622"
+            "644"
+        ],
+        [
+            "/learn/sample-post/",
+            "173"
         ],
         [
             "/learn/set-up-authentication-system-in-django-in-just-10-minutes/",
-            "1910"
+            "2106"
+        ],
+        [
+            "/learn/step-up-guide-to-implement-ajax-in-django",
+            "343"
         ],
         [
             "/package-of-week/categories-with-django-mptt/",
-            "4913"
+            "5357"
         ],
         [
             "/package-of-week/how-to-integrate-mailchimp-on-django-to-increase-subscribers/",
-            "3170"
+            "3483"
         ]
     ]
 }
